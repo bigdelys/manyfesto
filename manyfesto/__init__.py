@@ -61,8 +61,10 @@ def _get_file_key_value_directives(folder: str, context: Context = None, verbosi
     simple_key_values = OrderedDict()
     directives = list()
 
-    manyfesto_directives = {MATCH_DIRECTIVE, EXTRACT_DIRECTIVE, IGNORE_DIRECTIVE}
+    manyfesto_directives = {MATCH_DIRECTIVE, EXTRACT_DIRECTIVE, IGNORE_DIRECTIVE, MANIFEST_FILENAME_DIRECTIVE}
     manyfesto_file_level_directives = {MATCH_DIRECTIVE, EXTRACT_DIRECTIVE, IGNORE_DIRECTIVE}
+
+    children_manifest_filename = context.manifest_filename
 
     for key in current_folder_manifest_odict:
         is_simple_kv = True
@@ -75,15 +77,21 @@ def _get_file_key_value_directives(folder: str, context: Context = None, verbosi
                 if directive in manyfesto_file_level_directives:
                     continue
                 else:  # directive is not a file-level directive and hence needs to be processed here
-                       # table directives to be implemented here
-                    pass
+                       if directive == MANIFEST_FILENAME_DIRECTIVE:
+                           children_manifest_filename = current_folder_manifest_odict[key]
 
         if is_simple_kv:
             simple_key_values[key] = current_folder_manifest_odict[key]
 
     # update context
     # making sure changes stay local to this function
-    current_context = copy.deepcopy(context)
+    #current_context = copy.deepcopy(context)
+    current_context = Context(parent_key_values=copy.deepcopy(context.parent_key_values),
+                              directives=copy.deepcopy(context.directives),
+                              root_folder=context.root_folder,
+                              errors=copy.deepcopy(context.errors),
+                              warnings=copy.deepcopy(context.warnings),
+                              manifest_filename=children_manifest_filename)
 
     # apply new simple key-values
     for key in simple_key_values:
