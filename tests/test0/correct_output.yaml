@@ -1,0 +1,9 @@
+/sub1/file1.txt: &id001
+  common_a: replaced_string
+  common_b: 1
+  common_c: 200
+/sub1/file2.png: *id001
+/sub2/file3.jpg:
+  common_a: some_string
+  common_b: 1
+  common_c: 2

@@ -1,0 +1,8 @@
+(match *.txt):
+  is_txt1: True
+
+(match *.png):
+  is_png: True
+
+common_b: 1
+common_c: 2

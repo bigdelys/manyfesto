@@ -1,0 +1,5 @@
+(match *.txt):
+  is_txt1: False
+  is_txt2: True
+common_a: replaced_string
+common_c: 200
