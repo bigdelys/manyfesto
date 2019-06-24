@@ -1,0 +1,6 @@
+(extract /[animal]/[breed].*): direct
+
+(match *.png):
+  is_png: True
+
+common_a: 1

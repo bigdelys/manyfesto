@@ -4,6 +4,8 @@ from collections import OrderedDict, namedtuple
 from typing import List, Tuple, Union, Dict
 import copy
 from pathlib import PurePath
+import re
+import uuid
 
 # current version
 DEFAULT_MANIFEST_FILE = 'manifest.yaml'
@@ -31,13 +33,60 @@ Directive = namedtuple('Directive', ['key', 'value', 'manifest_filename'])
 KeyValuesAndDirectives = namedtuple('KeyValuesAndDirectives', ['key_values', 'directives'])
 
 
-def _get_file_key_value_directives(folder: str, context: Context = None, verbosity=True) -> \
+def extract_pattern_key_values(s: str, extract_pattern: str) -> Union[Dict, None]:
+    """
+    Extracts (key, values) from the input string based on the provided pattern.
+    :param s: input string
+    :param extract_pattern: a pattern containing * and [key_x] elements. For example: /dir1/*/animal_[type]_[breed].jpg
+    :return: If there is a match, a dictionary with pattern (key, values). Otherwise None
+    """
+
+    # replace * chars in extract_pattern with dummy extraction keys
+    dummy_keys = list()
+    while extract_pattern.find('*') > -1:
+        uid = 'dummy' + str(uuid.uuid4()).replace('-', '')
+        dummy_keys.append(uid)
+        extract_pattern = extract_pattern.replace('*', '[' + uid + ']', 1)
+
+    bracket_extraction_regex = r'\[\w+\]+'
+
+    extract_pattern_parts = re.split(bracket_extraction_regex, extract_pattern)
+    extract_glob = re.sub(bracket_extraction_regex, '*', extract_pattern)
+
+    extract_keys = re.findall(bracket_extraction_regex, extract_pattern)
+    # remove [ and ]
+    extract_keys = list(map(lambda x: x.replace('[', ''), extract_keys))
+    extract_keys = list(map(lambda x: x.replace(']', ''), extract_keys))
+
+    extracted_kvs = dict()
+    if PurePath(s).match(extract_glob):
+        for i, part in enumerate(extract_pattern_parts):
+            s = s[len(part):]
+            if i + 1 < len(extract_pattern_parts):
+
+                if extract_pattern_parts[i + 1] == '':
+                    extracted_kvs[extract_keys[i]] = s
+                else:
+                    next_index = s.find(extract_pattern_parts[i + 1])
+                    if next_index > -1:
+                        value = s[:next_index]
+                        s = s[next_index:]
+                        extracted_kvs[extract_keys[i]] = value
+
+        # remove dummy keys
+        for k in dummy_keys:
+            extracted_kvs.pop(k)
+        return extracted_kvs
+    else:
+        return None
+
+def _get_file_key_value_directives(folder: str, context: Context = None) -> \
         Tuple[Dict[str, KeyValuesAndDirectives], List, List]:
     """
-    Internal
-    :param folder:
-    :param context:
-    :param verbosity:
+    Internal function to recursively collect key-value pairs and directives. File-level directives are processed
+    outside of this function.
+    :param folder: the folder to process
+    :param context: information from the parent folder, such as directives, key-value pairs, etc.
     :return:
     """
 
@@ -134,20 +183,21 @@ def _get_file_key_value_directives(folder: str, context: Context = None, verbosi
 def manyfesto(folder: str, return_issues=False, verbosity=True) \
         -> Union[OrderedDict, Tuple[OrderedDict, List, List]]:
     """
-
-    :param folder:
-    :param return_issues:
-    :param verbosity:
-    :return:
+    The main function. Starts from the topmost folder and processes manifest files to output an ordered dictionary
+    with key-values assigned to all the files under this folder (including subfolders). The files are represented
+    relative to the the input folder.
+    :param folder: the top folder to start.
+    :param return_issues: whether to return errors and warnings. Default is False.
+    :param verbosity: whether to produce more text output during processing.
+    :return: either an ordered dictionary with files as keys and key-values as values. or a tuple
     """
 
-    files_key_values_directives, errors, warnings = _get_file_key_value_directives(folder, verbosity=verbosity)
+    files_key_values_directives, errors, warnings = _get_file_key_value_directives(folder)
 
     files_key_values = dict()
     files_to_ignore = set()
 
     for file in files_key_values_directives:
-        file_posix = PurePath(file).as_posix()
         file_key_values = files_key_values_directives[file].key_values.copy()
         file_directives = files_key_values_directives[file].directives.copy()
 
@@ -176,6 +226,32 @@ def manyfesto(folder: str, return_issues=False, verbosity=True) \
             if directive_type == MATCH_DIRECTIVE:
                 if PurePath(path_for_matching).match(directive_param):
                     file_key_values.update(file_directive.value)
+            elif directive_type == EXTRACT_DIRECTIVE:
+                extracted_kvs = extract_pattern_key_values(path_for_matching, directive_param)
+                if extracted_kvs:
+                    if file_directive.value == 'direct':
+                        file_key_values.update(extracted_kvs)
+                    elif type(file_directive.value) is dict:
+
+                        # check to see if all keys in the directive dict are are in extraction keys.
+                        for k in file_directive.value:
+                            if not k in extracted_kvs:
+                                warnings.append('In %s: %s must be one of the extraction keys %s.' \
+                                              % (key + ': ' + str(file_directive.value), k,
+                                                 str(list(extracted_kvs.keys()))))
+
+                        for k in extracted_kvs:
+                            if k in file_directive.value:
+                                value_mapper_dict = file_directive.value[k]
+                                if extracted_kvs[k] in value_mapper_dict:
+                                    file_key_values[k] = value_mapper_dict[extracted_kvs[k]]
+                                else:
+                                    file_key_values[k] = extracted_kvs[k]
+                            else:
+                                file_key_values[k] = extracted_kvs[k]
+                    else:
+                        errors.append('In %s: the value must be either "direct" or nested key-value pairs' \
+                                      % (key + ': ' + str(file_directive.value)))
             elif directive_type == IGNORE_DIRECTIVE:
 
                 # ignore can have one or more values, normalize a single string them to a list of length 1

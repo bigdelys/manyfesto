@@ -23,7 +23,7 @@ SOFTWARE.
 
 -----------------------------------------------------------------------------
 
-This work is based on the original Qascade code under the following license:
+This work is based on the original Qascade code, written by Nima Bigdely Shamlo at Syntrogi (dba Intheon), and released under the following license:
 
 -----------------------------------------------------------------------------
 

@@ -1,0 +1,18 @@
+/cat/persian.jpg:
+  common_a: 1
+  animal: cat
+  breed: persian
+/cat/siamese.png:
+  common_a: 1
+  animal: cat
+  breed: siamese
+  is_png: true
+/dog/boxer.jpg:
+  common_a: 1
+  animal: dog
+  breed: boxer
+/dog/corgy.png:
+  common_a: 1
+  animal: dog
+  breed: corgy
+  is_png: true

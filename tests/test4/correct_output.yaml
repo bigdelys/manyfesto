@@ -1,0 +1,5 @@
+ /sub1/file2.png:
+  common_b: 1
+  common_c: 200
+  common_a: replaced_string
+  is_png: true
