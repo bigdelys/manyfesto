@@ -7,7 +7,7 @@ class TestManyfesto(TestCase):
         import oyaml
         from pathlib import Path
         print('\n-------------- Tests Output -----------------')
-        for test_num in range(7):
+        for test_num in range(8):
             test_folder = Path(r"../tests/test" + str(test_num) + "/")
             container_folder = test_folder / 'container'
             correct_read_file = test_folder / Path('correct_output.yaml')
