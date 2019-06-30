@@ -2,31 +2,69 @@
   <img src="/logo.svg">
 </div>
 
-# Manyfesto
+Manyfesto is a data-science tool written in Python. It enables you to to assign meta-data (data about data, as a set of key-value pairs) to each file using a few simple rules. Such meta-data can then be used in data processing scripts, for example to assign class labels when training a machine learning algorithm.
 
-Manyfesto is a data science utility that enables you to to assign meta-data, as a set of key-value pairs, to each of your data files using a few simple rules. For example: 
-
-Such meta-data can then be used in your data processing scripts, for example to select data files based on a particular key value (e.g. age > 18). 
-Automated assignment of meta-data also makes it easy to share data with others. 
-
-You can think of Manyfesto as `Markdown` for metadata assigment: it is simpler, easier to modify and more declarative (compared to using JSON or XML). The main idea behind the Manyfesto is simple: at each level of the folder hierarchy, a special `manifest.yaml` file containing YAML-formatted text is placed which contains `(key:value)` pairs that are assigned to all files in the folder and its subfolders. Manifest files in subfolders overwrite keys assigned in parent directories:
-
-![Manyfesto key values in folders](./docs/Manyfesto.png "How Manyfesto works")
-
-Special directives are used to assign `(key:value)` pairs to groups of files, or extract file-specific `(key:value)` pairs, based on file names or paths. Here is an example Manyfesto code:
+It is easier to show what Manyfesto does by an example. If we have a folder called `animals` containing the following files:
 
 ```
-key 1: value 1
-
-(matches *.dat):
-   key 1: value 2
-   key 2: value 3  
-
-(extract sometitle_S[subjectNumber]_T[taskLabel].h5): direct
+animals
+│ manifest.yaml
+│
+└─── cat
+│    │ persian.jpg
+│    │ siamese.png
+│
+└─── dog
+     │ boxer.jpg
+     │ corgy.png
 ```
+with `manifest.yaml` as:
+```yaml
+(extract /[animal]/[breed].*): direct
 
-It first assigns `value 1` to `key 1` of all files in the folder and subfolders. It then, for all `.dat` files, overwrites `key 1` values to `value 3` and assigns `value 3` to `key 2`. Finally, it extracts values for `subjectNumber` and `taskLabel` keys from filenames of files that match `sometitle_S[subjectNumber]_T[taskLabel].h5` pattern.
+(match *.png):
+  is_png: True
 
-You can learn from the [Manyfesto Reference](https://docs.google.com/document/d/1H5wdQ3sHHq7DZsGgmdvrhSesr4AiHoaQgkmPe2yojoM/edit?usp=sharing).
+common_a: 1
+```
+Manyfesto produces the following output (formatted as YAML, the actual output is a Python dictionary):
+```yaml
+/cat/persian.jpg:
+  common_a: 1
+  animal: cat
+  breed: persian
+/cat/siamese.png:
+  common_a: 1
+  animal: cat
+  breed: siamese
+  is_png: true
+/dog/boxer.jpg:
+  common_a: 1
+  animal: dog
+  breed: boxer
+/dog/corgy.png:
+  common_a: 1
+  animal: dog
+  breed: corgy
+  is_png: true
+```
+For each file, a set of `(key:value)` pairs is defined, following the rules in the manifest.yaml file. More examples are available in the `/tests` folder.
 
+Folders annotated with Manyfesto are self-describing: instead of writing a document to explain how files are named and organized in folders, a few lines of YAML enables anyone to utilize the data based on the metadata assigned to each file. This makes it easy to share data with others.  
 
+You can think of Manyfesto as "Markdown for metadata assigment": compared to using JSON or XML to assign metadata for each file, it is simpler, easier to modify and more declarative as it uses rules instead of simply storing a separate sets of metadata for each file. 
+
+The main idea behind the Manyfesto is simple: at any level of the folder hierarchy, a special `manifest.yaml` file containing YAML-formatted text can be placed, containing `(key:value)` pairs that are assigned to all files in the folder and its subfolders. Manifest files in subfolders overwrite keys assigned in parent directories. This is similar to how Cascading Style Sheets (CSS) work. Additionally, a handful of special directives define rules for extracting information from file paths  (`extract` directive) or assigning `(key:value)` pairs to only a subset of files (`match` directive).
+
+To learn more about Manyfesto please read the documentation.
+
+## Installation
+```
+>> pip install manyfesto
+```
+ 
+ ## How to use
+ 
+```
+file_kvs = manyfesto(folder)
+```
