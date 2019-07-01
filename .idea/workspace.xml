@@ -7,7 +7,6 @@
     <list default="true" id="e170d025-d094-415a-83c1-1aa419a7fd78" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/manyfest_folders.svg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +35,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="199">
-                <caret line="71" column="13" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
+              <first_editor relative-caret-position="174">
+                <caret line="71" column="43" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
               </first_editor>
               <second_editor />
             </state>
@@ -349,7 +348,7 @@
       <workItem from="1556987085380" duration="50094000" />
       <workItem from="1558311572926" duration="37000" />
       <workItem from="1558311718489" duration="13375000" />
-      <workItem from="1561352961461" duration="22388000" />
+      <workItem from="1561352961461" duration="22578000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1557631172929</created>
@@ -407,7 +406,21 @@
       <option name="project" value="LOCAL" />
       <updated>1561959346576</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Moved the svg file.">
+      <created>1561960114219</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1561960114219</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Sized the svg file.">
+      <created>1561960253408</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1561960253408</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -443,7 +456,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85894000" />
+    <option name="totallyTimeSpent" value="86084000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="2449" height="1407" extended-state="0" />
@@ -486,7 +499,9 @@
     <MESSAGE value="Using safe_load and fixed readme and setup texts." />
     <MESSAGE value="Added manyfest_folder.svg to readme." />
     <MESSAGE value="Fixed an small issue with svg filename." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed an small issue with svg filename." />
+    <MESSAGE value="Moved the svg file." />
+    <MESSAGE value="Sized the svg file." />
+    <option name="LAST_COMMIT_MESSAGE" value="Sized the svg file." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/manyfesto$Unittests_in_test_manyfesto_py.coverage" NAME="Unittests in test_manyfesto.py Coverage Results" MODIFIED="1561956099304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/manyfesto" />
@@ -758,8 +773,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="199">
-            <caret line="71" column="13" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
+          <first_editor relative-caret-position="174">
+            <caret line="71" column="43" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
           </first_editor>
           <second_editor />
         </state>
