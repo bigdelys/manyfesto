@@ -69,7 +69,7 @@ You can think of Manyfesto as "Markdown for metadata assigment": compared to usi
 The main idea behind the Manyfesto is simple: at any level of the folder hierarchy, a special `manifest.yaml` file containing YAML-formatted text can be placed, containing `(key:value)` pairs that are assigned to all files in the folder and its subfolders. Manifest files in subfolders overwrite keys assigned in parent directories. This is similar to how Cascading Style Sheets (CSS) work. Additionally, a handful of special directives define rules for extracting information from file paths  (`extract` directive) or assigning `(key:value)` pairs to only a subset of files (`match` directive).
 
 <div align="center">
-  <img src="/doc/manyfest-folders.svg">
+  <img src="/doc/manyfest_folders.svg">
 </div>
 
 To learn more about Manyfesto please read the documentation.
