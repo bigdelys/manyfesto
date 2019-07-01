@@ -77,6 +77,9 @@ To learn more about Manyfesto please read the documentation.
  
  ## How to use
  
-```
+```python
+from manyfesto import manyfesto
 file_kvs = manyfesto(folder)
 ```
+
+The output `file_kvs` is a Python dictionary with one key for each file under `folder` and its subfolders. The values for these keys contain the metadata for the files (see the example output above).    

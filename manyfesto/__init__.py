@@ -33,7 +33,7 @@ Directive = namedtuple('Directive', ['key', 'value', 'manifest_filename'])
 KeyValuesAndDirectives = namedtuple('KeyValuesAndDirectives', ['key_values', 'directives'])
 
 
-def extract_pattern_key_values(s: str, extract_pattern: str) -> Union[Dict, None]:
+def _extract_pattern_key_values(s: str, extract_pattern: str) -> Union[Dict, None]:
     """
     Extracts (key, values) from the input string based on the provided pattern.
     :param s: input string
@@ -102,7 +102,7 @@ def _get_file_key_value_directives(folder: str, context: Context = None) -> \
     manifest_filename = os.path.join(folder, context.manifest_filename)
     if os.path.isfile(manifest_filename):
         with open(manifest_filename, 'r') as f:
-            current_folder_manifest_odict = oyaml.load(f)
+            current_folder_manifest_odict = oyaml.safe_load(f)
     else:
         current_folder_manifest_odict = OrderedDict()
 
@@ -180,7 +180,19 @@ def _get_file_key_value_directives(folder: str, context: Context = None) -> \
     return files_key_values_directives, errors, warnings
 
 
-def manyfesto(folder: str, return_issues=False, verbosity=True) \
+def _ordereddict_to_dict(value):
+    """
+    Convert nested OrderedDict objects to nested dict. It does not support Lists.
+    :param value: OrderedDict object
+    :return: dict object
+    """
+    for k, v in value.items():
+        if isinstance(v, dict):
+            value[k] = _ordereddict_to_dict(v)
+    return dict(value)
+
+
+def manyfesto(folder: str, return_issues=False, return_dict=True) \
         -> Union[OrderedDict, Tuple[OrderedDict, List, List]]:
     """
     The main function. Starts from the topmost folder and processes manifest files to output an ordered dictionary
@@ -188,7 +200,7 @@ def manyfesto(folder: str, return_issues=False, verbosity=True) \
     relative to the the input folder.
     :param folder: the top folder to start.
     :param return_issues: whether to return errors and warnings. Default is False.
-    :param verbosity: whether to produce more text output during processing.
+    :param return_dict: If True, it returns a regular python dict object instead of an OrderedDict object.
     :return: either an ordered dictionary with files as keys and key-values as values. or a tuple
     """
 
@@ -227,7 +239,7 @@ def manyfesto(folder: str, return_issues=False, verbosity=True) \
                 if PurePath(path_for_matching).match(directive_param):
                     file_key_values.update(file_directive.value)
             elif directive_type == EXTRACT_DIRECTIVE:
-                extracted_kvs = extract_pattern_key_values(path_for_matching, directive_param)
+                extracted_kvs = _extract_pattern_key_values(path_for_matching, directive_param)
                 if extracted_kvs:
                     if file_directive.value == 'direct':
                         file_key_values.update(extracted_kvs)
@@ -253,7 +265,6 @@ def manyfesto(folder: str, return_issues=False, verbosity=True) \
                         errors.append('In %s: the value must be either "direct" or nested key-value pairs' \
                                       % (key + ': ' + str(file_directive.value)))
             elif directive_type == IGNORE_DIRECTIVE:
-
                 # ignore can have one or more values, normalize a single string them to a list of length 1
                 ignore_values = file_directive.value
                 if type(ignore_values) is str:
@@ -269,6 +280,9 @@ def manyfesto(folder: str, return_issues=False, verbosity=True) \
 
     # remove ignored files
     files_key_values = {k: v for k, v in files_key_values.items() if k not in files_to_ignore}
+
+    if return_dict:
+        files_key_values = _ordereddict_to_dict(files_key_values)
 
     if return_issues:
         return files_key_values, errors, warnings
