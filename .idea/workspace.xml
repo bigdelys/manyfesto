@@ -35,8 +35,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="174">
-                <caret line="71" column="43" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
+              <first_editor relative-caret-position="289">
+                <caret line="105" column="91" selection-start-line="105" selection-start-column="91" selection-end-line="105" selection-end-column="91" />
               </first_editor>
               <second_editor />
             </state>
@@ -348,7 +348,7 @@
       <workItem from="1556987085380" duration="50094000" />
       <workItem from="1558311572926" duration="37000" />
       <workItem from="1558311718489" duration="13375000" />
-      <workItem from="1561352961461" duration="22578000" />
+      <workItem from="1561352961461" duration="23349000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1557631172929</created>
@@ -420,7 +420,28 @@
       <option name="project" value="LOCAL" />
       <updated>1561960253408</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Sized the svg file.">
+      <created>1561960280000</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1561960280000</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Sized the svg file.">
+      <created>1561960319389</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1561960319389</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Readme.">
+      <created>1561960484582</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1561960484582</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -456,13 +477,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86084000" />
+    <option name="totallyTimeSpent" value="86855000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="2449" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1569205" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1569205" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -476,14 +497,14 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.33226323" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.31942216" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.33226323" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.5810594" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" sideWeight="0.49759614" visible="true" weight="0.015986538" />
+      <window_info anchor="right" id="SciView" order="3" sideWeight="0.49616858" visible="true" weight="0.015986538" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Coverage" order="5" sideWeight="0.50240386" side_tool="true" visible="true" weight="0.015986538" />
+      <window_info anchor="right" id="Coverage" order="5" sideWeight="0.50383145" side_tool="true" visible="true" weight="0.015986538" />
       <window_info anchor="right" x="0" y="0" width="594" height="1216" id="Documentation" order="6" sideWeight="0.5024155" side_tool="true" weight="0.18730032" />
     </layout>
   </component>
@@ -501,7 +522,8 @@
     <MESSAGE value="Fixed an small issue with svg filename." />
     <MESSAGE value="Moved the svg file." />
     <MESSAGE value="Sized the svg file." />
-    <option name="LAST_COMMIT_MESSAGE" value="Sized the svg file." />
+    <MESSAGE value="Readme." />
+    <option name="LAST_COMMIT_MESSAGE" value="Readme." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/manyfesto$Unittests_in_test_manyfesto_py.coverage" NAME="Unittests in test_manyfesto.py Coverage Results" MODIFIED="1561956099304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/manyfesto" />
@@ -773,8 +795,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="174">
-            <caret line="71" column="43" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
+          <first_editor relative-caret-position="289">
+            <caret line="105" column="91" selection-start-line="105" selection-start-column="91" selection-end-line="105" selection-end-column="91" />
           </first_editor>
           <second_editor />
         </state>

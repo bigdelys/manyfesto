@@ -82,10 +82,25 @@ To learn more about Manyfesto please read the documentation.
 ```
  
  ## How to use
- 
+To import a folder containing manifest.yaml files: 
 ```python
 from manyfesto import manyfesto
 file_kvs = manyfesto(folder)
 ```
 
-The output `file_kvs` is a Python dictionary with one key for each file under `folder` and its subfolders. The values for these keys contain the metadata for the files (see the example output above).    
+The output `file_kvs` is a Python dictionary with one key for each file under `folder` and its subfolders. The values for these keys contain the metadata for the files:
+```python
+file_kvs = {
+             '/cat/persian.jpg': {'animal': 'cat', 'breed': 'persian', 'common_a': 1},
+             '/cat/siamese.png': {'animal': 'cat',
+                                  'breed': 'siamese',
+                                  'common_a': 1,
+                                  'is_png': True},
+             '/dog/boxer.jpg': {'animal': 'dog', 'breed': 'boxer', 'common_a': 1},
+             '/dog/corgy.png': {'animal': 'dog',
+                                'breed': 'corgy',
+                                'common_a': 1,
+                                'is_png': True}}
+```
+
+Please refer to the documentation to learn how to create manifest.yaml files and where to place them.
