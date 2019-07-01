@@ -66,11 +66,13 @@ Folders annotated with Manyfesto are self-describing: instead of writing a docum
 
 You can think of Manyfesto as "Markdown for metadata assigment": compared to using JSON or XML to assign metadata for each file, it is simpler, easier to modify and more declarative as it uses rules instead of simply storing a separate sets of metadata for each file. 
 
-The main idea behind the Manyfesto is simple: at any level of the folder hierarchy, a special `manifest.yaml` file containing YAML-formatted text can be placed, containing `(key:value)` pairs that are assigned to all files in the folder and its subfolders. Manifest files in subfolders overwrite keys assigned in parent directories. This is similar to how Cascading Style Sheets (CSS) work. Additionally, a handful of special directives define rules for extracting information from file paths  (`extract` directive) or assigning `(key:value)` pairs to only a subset of files (`match` directive).
+The main idea behind the Manyfesto is simple: at any level of the folder hierarchy, a special `manifest.yaml` file containing YAML-formatted text can be placed, containing `(key:value)` pairs that are assigned to all files in the folder and its subfolders. Manifest files in subfolders overwrite keys assigned in parent directories:
 
 <div align="center">
   <img src="/manyfest_folders.svg" width="700">
 </div>
+
+This is similar to how Cascading Style Sheets (CSS) work. Additionally, a handful of special directives define rules for extracting information from file paths  (`extract` directive) or assigning `(key:value)` pairs to only a subset of files (`match` directive).
 
 To learn more about Manyfesto please read the documentation.
 
