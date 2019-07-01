@@ -1,7 +1,3 @@
-<div align="center">
-  <img src="/logo.svg">
-</div>
-
 Manyfesto is a data-science tool written in Python. It enables you to to assign meta-data (data about data, as a set of key-value pairs) to each file using a few simple rules. Such meta-data can then be used in data processing scripts, for example to assign class labels when training a machine learning algorithm.
 
 It is easier to show what Manyfesto does by an example. If we have a folder called `animals` containing the following files:
@@ -67,10 +63,6 @@ Folders annotated with Manyfesto are self-describing: instead of writing a docum
 You can think of Manyfesto as "Markdown for metadata assigment": compared to using JSON or XML to assign metadata for each file, it is simpler, easier to modify and more declarative as it uses rules instead of simply storing a separate sets of metadata for each file. 
 
 The main idea behind the Manyfesto is simple: at any level of the folder hierarchy, a special `manifest.yaml` file containing YAML-formatted text can be placed, containing `(key:value)` pairs that are assigned to all files in the folder and its subfolders. Manifest files in subfolders overwrite keys assigned in parent directories. This is similar to how Cascading Style Sheets (CSS) work. Additionally, a handful of special directives define rules for extracting information from file paths  (`extract` directive) or assigning `(key:value)` pairs to only a subset of files (`match` directive).
-
-<div align="center">
-  <img src="/doc/manyfest-folders.svg">
-</div>
 
 To learn more about Manyfesto please read the documentation.
 
