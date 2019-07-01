@@ -25,30 +25,42 @@ with `manifest.yaml` as:
 (match *.png):
   is_png: True
 
-common_a: 1
+common: 1
 ```
 Manyfesto produces the following output (formatted as YAML, the actual output is a Python dictionary):
 ```yaml
 /cat/persian.jpg:
-  common_a: 1
+  common: 1
   animal: cat
   breed: persian
 /cat/siamese.png:
-  common_a: 1
+  common: 1
   animal: cat
   breed: siamese
   is_png: true
 /dog/boxer.jpg:
-  common_a: 1
+  common: 1
   animal: dog
   breed: boxer
 /dog/corgy.png:
-  common_a: 1
+  common: 1
   animal: dog
   breed: corgy
   is_png: true
 ```
-For each file, a set of `(key:value)` pairs is defined, following the rules in the manifest.yaml file. More examples are available in the `/tests` folder.
+For each file, a set of `(key:value)` pairs is defined, following the rules in the manifest.yaml file. The rule 
+
+```yaml
+(extract /[animal]/[breed].*): direct
+```
+
+extracts values for `animal` and `breed` keys from filenames. In contrast, `common` key is set to `1` for all files.
+
+```yaml
+(match *.png):
+  is_png: True
+```
+assigns the value `True` to `is_png` key only to files that match the glob (wildcard) pattern `*.png`. More examples are available in the `/tests` folder.
 
 Folders annotated with Manyfesto are self-describing: instead of writing a document to explain how files are named and organized in folders, a few lines of YAML enables anyone to utilize the data based on the metadata assigned to each file. This makes it easy to share data with others.  
 
