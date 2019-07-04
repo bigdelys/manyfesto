@@ -10,7 +10,7 @@ Manyfesto is a data-science tool written in Python. It enables you to to assign 
 ## What problem does it solve?
 You may be wondering what the problem Manyfesto tries to solve is. Most data-science workflows include a step where the data from several different files are read and combined to form data arrays. As the number of these files increases, it becomes more important to keep them organized and keep track of their metadata. 
 For example, imagine you want to create a machine learning system to detect fraudulent transactions. The customer, e.g., a bank, provides you with 
-Twenty files, 15 of them containing legitimate transactions and 5 containing fraudulent ones. Transaction type is encoded in file names, along with some other information (date range). 
+20 files, 15 of them containing legitimate transactions and 5 containing fraudulent ones. Transaction type is encoded in file names, along with some other information (date range). 
 
 So far these files are easy to manage: you can place them in two folders (fraudulent or not), or write a few lines of code to infer transaction classes from their names at load time. As you analyze these files, you find some quality issues with a subset of them and report this to the bank. After a while, they send you a new set of files with improved pre-processing. 
 This new set contains improved versions of the problematic subset plus some new files. But unfortunately, it has a slightly different naming convention, different enough that requires new code to process it.
@@ -22,10 +22,10 @@ This problem is often addressed by having multiple `if/else` statements in the i
 
 Manyfesto offers an alternative solution: all metadata is obtained in a single line of code by calling Manyfesto. To specify how metadata is to be extracted, you create a small YAML file is each folder. Common metadata or extraction rules can be placed on the parent folder and are inherited by subfolders.
 The advantages of this are:
-1. It is declarative: metadata `(key:value)` sets and naming convention are defined alongside the data files. Folders annotated with Manyfesto are self-describing: instead of writing a document to explain how files are named and organized in folders, a few lines of YAML enables anyone to utilize the data based on the metadata assigned to each file. This makes it easy to share data with others.  
+1. It is declarative: metadata `(key:value)` sets and naming conventions are defined alongside the data files. 
 2. Inheritance of metadata and rules from parent folders in Manyfesto enables factorization, promoting a more intuitive organization of data files in nested directories.
 3. Facilitates data sharing: folders annotated with Manyfesto are self-describing. As long as the meanings of keys and values is understood across parties, there is no need to write a document to explain how files are named and organized in folders.  
-4. It is simpler and easier to modify than a JSON or XML document hard-coding metadata separately for each file. You can think of Manyfesto as "Markdown for metadata assigment. 
+4. It is simpler and easier to modify than a JSON or XML document that hard-codes metadata separately for each file. You can think of Manyfesto as "Markdown for metadata assigment". 
 
 ## Example
 
@@ -89,12 +89,12 @@ assigns the value `True` to `is_png` key only to files that match the glob (wild
 
 ## How does it work?
 
-The main idea behind the Manyfesto is simple: at any level of the folder hierarchy, a special `manifest.yaml` file containing YAML-formatted text can be placed, containing `(key:value)` pairs that are assigned to all files in the folder and its subfolders. Manifest files in subfolders overwrite keys assigned in parent directories:
+At any level of the folder hierarchy, a special `manifest.yaml` file containing YAML-formatted text can be placed, containing `(key:value)` pairs that are assigned to all files in the folder and its subfolders. Manifest files in subfolders overwrite keys assigned in parent directories:
 <div align="center">
   <img src="/manyfest_folders.svg" width="700">
 </div>
 
-This is similar to how Cascading Style Sheets (CSS) work. Additionally, a handful of special directives define rules for extracting information from file paths  (`extract` directive) or assigning `(key:value)` pairs to only a subset of files (`match` directive).
+This is similar to how Cascading Style Sheets (CSS) work. Additionally, a handful of special directives (also written as `keys:value` pairs) define rules for extracting information from file paths  (`extract` directive) or assigning `(key:value)` pairs to only a subset of files (`match` directive).
 
 To learn more about Manyfesto please read the documentation.
 
