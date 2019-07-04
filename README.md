@@ -1,7 +1,9 @@
-# Manyfesto
+
 <div align="center">
-  <img src="/logo.svg" width="70%">
+  <img src="/logo.svg" width="90%">
 </div>
+
+# Manyfesto
 
 Manyfesto is a data-science tool written in Python. It enables you to to assign meta-data (data about data, as a set of key-value pairs) to each file using a few simple rules. Such meta-data can then be used in data processing scripts, for example to assign class labels when training a machine learning algorithm.
 
