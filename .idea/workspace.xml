@@ -7,6 +7,10 @@
     <list default="true" id="e170d025-d094-415a-83c1-1aa419a7fd78" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manyfesto/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/manyfesto/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manyfesto/test_manyfesto.py" beforeDir="false" afterPath="$PROJECT_DIR$/manyfesto/test_manyfesto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,15 +19,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="15" />
+    <option name="myElementSize" value="108" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manyfesto/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+            <state relative-caret-position="10">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -35,8 +39,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="50">
-                <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+              <first_editor relative-caret-position="1201">
+                <caret line="111" selection-start-line="111" selection-end-line="111" />
               </first_editor>
               <second_editor />
             </state>
@@ -47,17 +51,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/doc/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
+              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -66,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -114,7 +108,7 @@
         <entry file="file://$PROJECT_DIR$/manyfesto/test_manyfesto.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="277">
-              <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+              <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -143,6 +137,7 @@
       <find>safe_</find>
       <find>OrderedDict</find>
       <find>common_a</find>
+      <find>read write</find>
     </findStrings>
     <replaceStrings>
       <replace>Manyfesto</replace>
@@ -197,10 +192,10 @@
         <option value="$PROJECT_DIR$/tests/test7/correct_output.yaml" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/manyfesto/test_manyfesto.py" />
-        <option value="$PROJECT_DIR$/manyfesto/__init__.py" />
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/doc/README.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/manyfesto/__init__.py" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -229,11 +224,6 @@
               <item name="manyfesto" type="b2602c69:ProjectViewProjectNode" />
               <item name="manyfesto" type="462c0819:PsiDirectoryNode" />
               <item name="build" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="manyfesto" type="b2602c69:ProjectViewProjectNode" />
-              <item name="manyfesto" type="462c0819:PsiDirectoryNode" />
-              <item name="doc" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -362,7 +352,7 @@
       <workItem from="1556987085380" duration="50094000" />
       <workItem from="1558311572926" duration="37000" />
       <workItem from="1558311718489" duration="13375000" />
-      <workItem from="1561352961461" duration="28616000" />
+      <workItem from="1561352961461" duration="32219000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1557631172929</created>
@@ -476,13 +466,24 @@
       <option name="project" value="LOCAL" />
       <updated>1562262131936</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Larger logo.">
+      <created>1562262204968</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1562262204968</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Readme.">
+      <created>1562262246912</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1562262246912</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_manyfesto_py - 2019.06.23 at 22h 17m 33s.xml">
-      <configuration name="Unittests in test_manyfesto.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_test_manyfesto_py - 2019.06.30 at 20h 52m 32s.xml">
       <configuration name="Unittests in test_manyfesto.py" configurationId="tests" />
     </history-entry>
@@ -510,16 +511,19 @@
     <history-entry file="Unittests_in_test_manyfesto_py - 2019.06.30 at 23h 06m 20s.xml">
       <configuration name="Unittests in test_manyfesto.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_test_manyfesto_py - 2019.07.04 at 14h 25m 17s.xml">
+      <configuration name="Unittests in test_manyfesto.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92122000" />
+    <option name="totallyTimeSpent" value="95725000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="2462" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.015899582" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49950445" visible="true" weight="0.015899582" />
+      <window_info id="Structure" order="1" sideWeight="0.50049555" side_tool="true" visible="true" weight="0.015899582" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32985553" />
@@ -537,9 +541,9 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" sideWeight="0.4975223" visible="true" weight="0.023012552" />
+      <window_info anchor="right" id="SciView" order="3" sideWeight="0.4975223" visible="true" weight="0.13138075" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Coverage" order="5" sideWeight="0.5024777" side_tool="true" visible="true" weight="0.023012552" />
+      <window_info active="true" anchor="right" id="Coverage" order="5" sideWeight="0.5024777" side_tool="true" visible="true" weight="0.13138075" />
       <window_info anchor="right" x="0" y="0" width="594" height="1216" id="Documentation" order="6" sideWeight="0.5024155" side_tool="true" weight="0.18730032" />
     </layout>
   </component>
@@ -557,12 +561,13 @@
     <MESSAGE value="Fixed an small issue with svg filename." />
     <MESSAGE value="Moved the svg file." />
     <MESSAGE value="Sized the svg file." />
-    <MESSAGE value="Readme." />
     <MESSAGE value="Added problem definition to readme." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added problem definition to readme." />
+    <MESSAGE value="Larger logo." />
+    <MESSAGE value="Readme." />
+    <option name="LAST_COMMIT_MESSAGE" value="Readme." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/manyfesto$Unittests_in_test_manyfesto_py.coverage" NAME="Unittests in test_manyfesto.py Coverage Results" MODIFIED="1561961177264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/manyfesto" />
+    <SUITE FILE_PATH="coverage/manyfesto$Unittests_in_test_manyfesto_py.coverage" NAME="Unittests in test_manyfesto.py Coverage Results" MODIFIED="1562275513698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/manyfesto" />
     <SUITE FILE_PATH="coverage/manyfesto$test_extract_patterns_script.coverage" NAME="test_extract_patterns_script Coverage Results" MODIFIED="1558316562138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/no_track/scripts" />
   </component>
   <component name="debuggerHistoryManager">
@@ -792,24 +797,14 @@
     <entry file="file://$PROJECT_DIR$/manyfesto/test_manyfesto.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
-          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manyfesto/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -824,15 +819,25 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manyfesto/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="50">
-            <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+          <first_editor relative-caret-position="1201">
+            <caret line="111" selection-start-line="111" selection-end-line="111" />
           </first_editor>
           <second_editor />
         </state>

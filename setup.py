@@ -13,16 +13,16 @@ You can think of Manyfesto as 'Markdown for metadata assigment': compared to usi
 Please see the project homepage for more information.
 """
 
-setup(name='manyfesto',
+setup(name='read',
       version='0.1.7',
       description='Manyfesto is a data science tools for assigning key-value pairs to individual files using a series of simple rules.',
       long_description=long_description,
       long_description_content_type="text/markdown",
       url='http://github.com/bigdelys/manyfesto',
       author='Nima Bigdely-Shamlo',
-      author_email='manyfesto@gmail.com',
+      author_email='read@gmail.com',
       license='MIT',
-      packages=['manyfesto'],
+      packages=['read'],
       classifiers=[
             "Programming Language :: Python :: 3",
             "License :: OSI Approved :: MIT License",

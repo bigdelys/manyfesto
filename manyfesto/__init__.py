@@ -17,7 +17,7 @@ MANIFEST_FILENAME_DIRECTIVE = 'manifest filename'
 # future directives
 TABLE_DIRECTIVE = 'table'
 NO_SUBDIR_DIRECTIVE = 'no-subdir'
-VERSION_DIRECTIVE = 'manyfesto version'
+VERSION_DIRECTIVE = 'read version'
 # the (namespace) directive is processes like a normal (key: value), hence not included.
 
 Context = namedtuple('Context', ['parent_key_values', 'directives', 'root_folder', 'errors', 'warnings',
@@ -192,7 +192,7 @@ def _ordereddict_to_dict(value):
     return dict(value)
 
 
-def manyfesto(folder: str, return_issues=False, return_dict=True) \
+def read(folder: str, return_issues=False, return_dict=True) \
         -> Union[OrderedDict, Tuple[OrderedDict, List, List]]:
     """
     The main function. Starts from the topmost folder and processes manifest files to output an ordered dictionary
