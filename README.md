@@ -1,8 +1,29 @@
+# Manyfesto
 <div align="center">
   <img src="/logo.svg">
 </div>
 
 Manyfesto is a data-science tool written in Python. It enables you to to assign meta-data (data about data, as a set of key-value pairs) to each file using a few simple rules. Such meta-data can then be used in data processing scripts, for example to assign class labels when training a machine learning algorithm.
+
+##What problem does it solve?
+You may be wondering what is the problem Manyfesto tries to solve. Most data-science workflows include a step where the data from a number of different files is read and combined together to form data arrays. As the number of these files increases, it becomes more important to keep them organized and keep track of their metadata. 
+For example, imagine you want to create a machine learning system to detect fraudulent transactions. The customer, e.g. a bank, provides you with 
+20 files, 15 of them containing legitimate transactions and 5 containing fraudulent ones. Transaction type is encoded in file names, along with some other information (date range). 
+
+So far these files are easy to manage: you can place them in two folders (fraudulent or not), or read write a few lines of code to infer transaction classes from their names at load time.  
+During the processing these files, you find some quality issues with a subset of them and report them to the bank. After a while they send you a new set of files with improved processing. 
+This new set contains improved versions of the problematic subset plus some new files. But unfortunately it has a slightly different naming convention, different enough that requires new code to process it.
+
+
+As the project continues, this process repeats a few more times, resulting in multiple folders each containing files with a slightly different naming conventions. 
+Now you need to keep track of a number of values for each file: the order it was received form the bank, its naming convention and whether it contains fraudulent transactions.
+This is often addressed by having multiple `if/else` statements in the import code. Unfortunately this solution is neither elegant nor very scalable.   
+
+Manyfesto offers an alternative solution: all metadata is obtained in a single line of code by calling Manyfesto. 
+To specify how metadata is to be extracted, you create a short YAML file is each folder. Common metadata or extraction rules can be placed on parent folder and 
+are inherited to subfolders.       
+
+## Example
 
 It is easier to show what Manyfesto does by an example. If we have a folder called `animals` containing the following files:
 
@@ -27,7 +48,7 @@ with `manifest.yaml` as:
 
 common: 1
 ```
-Manyfesto produces the following output (formatted as YAML, the actual output is a Python dictionary):
+Manyfesto produces the following output (here presented as YAML, the actual output is a Python dictionary):
 ```yaml
 /cat/persian.jpg:
   common: 1
@@ -103,4 +124,4 @@ file_kvs = {
                                 'is_png': True}}
 ```
 
-Please refer to the documentation to learn how to create manifest.yaml files and where to place them.
+Please refer to the documentation to learn how to create `manifest.yaml` files.

@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e170d025-d094-415a-83c1-1aa419a7fd78" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Nima.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Nima.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -35,10 +37,19 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="289">
-                <caret line="105" column="91" selection-start-line="105" selection-start-column="91" selection-end-line="105" selection-end-column="91" />
+              <first_editor relative-caret-position="575">
+                <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -129,11 +140,11 @@
       <find>IGNORE_DIRECTIVE</find>
       <find>Qascade</find>
       <find>`Manyfesto`</find>
-      <find>common_a</find>
       <find>common_key</find>
       <find>load</find>
       <find>safe_</find>
       <find>OrderedDict</find>
+      <find>common_a</find>
     </findStrings>
     <replaceStrings>
       <replace>Manyfesto</replace>
@@ -178,7 +189,6 @@
         <option value="$PROJECT_DIR$/tests/test2/container/manifest.yaml" />
         <option value="$PROJECT_DIR$/tests/test2/correct_output.yaml" />
         <option value="$PROJECT_DIR$/tests/test3/container/manifest.yaml" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/no_track/scripts/test_extract_patterns_script.py" />
         <option value="$PROJECT_DIR$/tests/test5/container/cat/customer_manifest_name.yaml" />
         <option value="$PROJECT_DIR$/tests/test5/container/manifest.yaml" />
@@ -192,13 +202,14 @@
         <option value="$PROJECT_DIR$/manyfesto/__init__.py" />
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/doc/README.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="2449" />
+    <option name="width" value="2462" />
     <option name="height" value="1407" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -215,6 +226,11 @@
             <path>
               <item name="manyfesto" type="b2602c69:ProjectViewProjectNode" />
               <item name="manyfesto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="manyfesto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="manyfesto" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="manyfesto" type="b2602c69:ProjectViewProjectNode" />
@@ -348,7 +364,7 @@
       <workItem from="1556987085380" duration="50094000" />
       <workItem from="1558311572926" duration="37000" />
       <workItem from="1558311718489" duration="13375000" />
-      <workItem from="1561352961461" duration="23349000" />
+      <workItem from="1561352961461" duration="28585000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1557631172929</created>
@@ -441,13 +457,24 @@
       <option name="project" value="LOCAL" />
       <updated>1561960484582</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Readme.">
+      <created>1561961052603</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1561961052603</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Readme.">
+      <created>1561961117731</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1561961117731</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_manyfesto_py - 2019.06.23 at 22h 16m 42s.xml">
-      <configuration name="Unittests in test_manyfesto.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_test_manyfesto_py - 2019.06.23 at 22h 17m 33s.xml">
       <configuration name="Unittests in test_manyfesto.py" configurationId="tests" />
     </history-entry>
@@ -475,20 +502,23 @@
     <history-entry file="Unittests_in_test_manyfesto_py - 2019.06.30 at 21h 41m 42s.xml">
       <configuration name="Unittests in test_manyfesto.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_test_manyfesto_py - 2019.06.30 at 23h 06m 20s.xml">
+      <configuration name="Unittests in test_manyfesto.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86855000" />
+    <option name="totallyTimeSpent" value="92091000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="2449" height="1407" extended-state="0" />
+    <frame x="-7" y="0" width="2462" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1569205" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.015899582" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32985553" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.48635635" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19020867" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.33944222" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -498,13 +528,13 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.33226323" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.5810594" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.5810594" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" sideWeight="0.49616858" visible="true" weight="0.015986538" />
+      <window_info anchor="right" id="SciView" order="3" sideWeight="0.4975223" visible="true" weight="0.023012552" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Coverage" order="5" sideWeight="0.50383145" side_tool="true" visible="true" weight="0.015986538" />
+      <window_info anchor="right" id="Coverage" order="5" sideWeight="0.5024777" side_tool="true" visible="true" weight="0.023012552" />
       <window_info anchor="right" x="0" y="0" width="594" height="1216" id="Documentation" order="6" sideWeight="0.5024155" side_tool="true" weight="0.18730032" />
     </layout>
   </component>
@@ -526,7 +556,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="Readme." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/manyfesto$Unittests_in_test_manyfesto_py.coverage" NAME="Unittests in test_manyfesto.py Coverage Results" MODIFIED="1561956099304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/manyfesto" />
+    <SUITE FILE_PATH="coverage/manyfesto$Unittests_in_test_manyfesto_py.coverage" NAME="Unittests in test_manyfesto.py Coverage Results" MODIFIED="1561961177264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/manyfesto" />
     <SUITE FILE_PATH="coverage/manyfesto$test_extract_patterns_script.coverage" NAME="test_extract_patterns_script Coverage Results" MODIFIED="1558316562138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/no_track/scripts" />
   </component>
   <component name="debuggerHistoryManager">
@@ -657,13 +687,6 @@
     <entry file="file://$PROJECT_DIR$/tests/test3/container/sub1/customer_manifest_name.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-start-column="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/test5/container/cat/persian.jpg">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -792,11 +815,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="289">
-            <caret line="105" column="91" selection-start-line="105" selection-start-column="91" selection-end-line="105" selection-end-column="91" />
+          <first_editor relative-caret-position="575">
+            <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
           </first_editor>
           <second_editor />
         </state>
