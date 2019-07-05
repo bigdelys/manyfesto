@@ -1,0 +1,25 @@
+/sub1/file1.txt:
+  common:
+    subfield_1:
+      subfield_1_1: 10
+      subfield_1_2: &id001
+        subfield_1_2_1: 2
+        subfield_1_2_3: 3
+  txt_match:
+    parent_value: from child
+    new_value: 10
+/sub1/file2.png:
+  common:
+    subfield_1:
+      subfield_1_1: 10
+      subfield_1_2: *id001
+  png_match:
+    second_level:
+      parent_value: from child
+      new_value: 20
+/sub2/file3.jpg:
+  common:
+    subfield_1:
+      subfield_1_1: 1
+      subfield_1_2:
+        subfield_1_2_1: 2

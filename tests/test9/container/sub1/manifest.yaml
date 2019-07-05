@@ -1,0 +1,17 @@
+(match *.txt):
+  txt_match:
+    parent_value: "from child"
+    new_value: 10
+
+(match *.png):
+  png_match:
+    second_level:
+      parent_value: "from child"
+      new_value: 20
+
+common:
+  subfield_1:
+      subfield_1_1: 10
+      subfield_1_2:
+        subfield_1_2_3: 3
+

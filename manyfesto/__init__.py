@@ -32,6 +32,28 @@ Directive = namedtuple('Directive', ['key', 'value', 'manifest_filename'])
 # for each file we record both key-value pairs, and the list of directives
 KeyValuesAndDirectives = namedtuple('KeyValuesAndDirectives', ['key_values', 'directives'])
 
+def deep_update_dict(parent_dict, child_dict, return_updated=False):
+    """ Recursive update a prent dictionary with a child dictionary. Keys at any level of the parent dictionary are
+    overwritten by keys in child dictionary if they are under the same sequence of keys.
+    :param parent_dict: parent dictionary. values of keys of this dictionary are overwritten.
+    :param child_dict: values from this dict is written onto the parent_dict.
+    :param return_updated: if True, make a copy of parent_dict and mutate/return the copy. Otherwise the function
+                        returns no values and mutates parent_dict in-place.
+    :return: A mutated copy of parent_dict is  return_updated == True, Otherwise None
+    """
+
+    if return_updated:
+        parent_dict = copy.deepcopy(parent_dict)
+
+    for k, v in child_dict.items():
+        if (k in parent_dict) and (isinstance(parent_dict[k], dict) or isinstance(parent_dict[k], OrderedDict)) \
+                and (isinstance(child_dict[k], dict) or isinstance(child_dict[k], OrderedDict)):
+            deep_update_dict(parent_dict[k], child_dict[k])
+        else:
+            parent_dict[k] = child_dict[k]
+
+    if return_updated:
+        return parent_dict
 
 def _extract_pattern_key_values(s: str, extract_pattern: str) -> Union[Dict, None]:
     """
@@ -143,8 +165,8 @@ def _get_file_key_value_directives(folder: str, context: Context = None) -> \
                               manifest_filename=children_manifest_filename)
 
     # apply new simple key-values
-    for key in simple_key_values:
-        current_context.parent_key_values[key] = simple_key_values[key]
+    # deep (recursive) merge of file key-values with the new key-value pairs
+    deep_update_dict(current_context.parent_key_values, simple_key_values, return_updated=False)
 
     # add thee new directive to the end of context directives list (they will execute last, so they take precedence)
     current_context.directives.extend(directives)
@@ -182,14 +204,24 @@ def _get_file_key_value_directives(folder: str, context: Context = None) -> \
 
 def _ordereddict_to_dict(value):
     """
-    Convert nested OrderedDict objects to nested dict. It does not support Lists.
+    Convert nested OrderedDict objects to nested dict.
     :param value: OrderedDict object
     :return: dict object
     """
-    for k, v in value.items():
-        if isinstance(v, dict):
-            value[k] = _ordereddict_to_dict(v)
-    return dict(value)
+
+    if isinstance(value, str) or isinstance(value, int) or  isinstance(value, float):
+        return value
+    elif isinstance(value, dict) or isinstance(value, OrderedDict):
+        for k, v in value.items():
+            if isinstance(v, dict):
+                value[k] = _ordereddict_to_dict(v)
+        return dict(value)
+    elif isinstance(value, list):
+        for item in value:
+            item = _ordereddict_to_dict(item)
+        return value
+    else:
+        return value
 
 
 def read(folder: str, return_issues=False, return_dict=True) \
@@ -237,12 +269,15 @@ def read(folder: str, return_issues=False, return_dict=True) \
 
             if directive_type == MATCH_DIRECTIVE:
                 if PurePath(path_for_matching).match(directive_param):
-                    file_key_values.update(file_directive.value)
+                    deep_update_dict(file_key_values, file_directive.value, return_updated=False)
+
             elif directive_type == EXTRACT_DIRECTIVE:
                 extracted_kvs = _extract_pattern_key_values(path_for_matching, directive_param)
                 if extracted_kvs:
                     if file_directive.value == 'direct':
-                        file_key_values.update(extracted_kvs)
+                        # deep (recursive) merge of file key-values with the new key-value pairs
+                        deep_update_dict(file_key_values, extracted_kvs, return_updated=False)
+
                     elif type(file_directive.value) is dict:
 
                         # check to see if all keys in the directive dict are are in extraction keys.
@@ -252,15 +287,19 @@ def read(folder: str, return_issues=False, return_dict=True) \
                                               % (key + ': ' + str(file_directive.value), k,
                                                  str(list(extracted_kvs.keys()))))
 
+                        mapped_dict = dict()
                         for k in extracted_kvs:
                             if k in file_directive.value:
                                 value_mapper_dict = file_directive.value[k]
                                 if extracted_kvs[k] in value_mapper_dict:
-                                    file_key_values[k] = value_mapper_dict[extracted_kvs[k]]
+                                    mapped_dict[k] = value_mapper_dict[extracted_kvs[k]]
                                 else:
-                                    file_key_values[k] = extracted_kvs[k]
+                                    mapped_dict[k] = extracted_kvs[k]
                             else:
-                                file_key_values[k] = extracted_kvs[k]
+                                mapped_dict[k] = extracted_kvs[k]
+                        # deep (recursive) merge of file key-values with the new key-value pairs
+                        deep_update_dict(file_key_values, mapped_dict, return_updated=False)
+
                     else:
                         errors.append('In %s: the value must be either "direct" or nested key-value pairs' \
                                       % (key + ': ' + str(file_directive.value)))
@@ -273,7 +312,6 @@ def read(folder: str, return_issues=False, return_dict=True) \
                 for ignore_value in ignore_values:
                     if PurePath(path_for_matching).match(ignore_value):
                         files_to_ignore.add(path_relative_to_root)
-                        # print('path_for_matching:', path_for_matching, 'ignore_value:', ignore_value)
 
         # the files are recorded as key, with paths relative to the root folder.
         files_key_values[path_relative_to_root] = file_key_values.copy()

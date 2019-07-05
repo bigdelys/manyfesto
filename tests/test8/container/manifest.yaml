@@ -1,0 +1,15 @@
+(match *.txt):
+  is_txt1: True
+
+(match *.png):
+  is_png: True
+
+common_b:
+  subfield_1: 1
+  subfield_2: 2
+
+common_c:
+  subfield_1:
+      subfield_1_1: 1
+      subfield_1_2:
+        subfield_1_2_1: 2

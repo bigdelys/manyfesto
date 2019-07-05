@@ -1,5 +1,6 @@
 from unittest import TestCase
 
+num_tests = 10
 
 class TestManyfesto(TestCase):
     def test_manyfesto(self):
@@ -7,7 +8,7 @@ class TestManyfesto(TestCase):
         import oyaml
         from pathlib import Path
         print('\n-------------- Tests Output -----------------')
-        for test_num in range(8):
+        for test_num in range(num_tests):
             test_folder = Path(r"../tests/test" + str(test_num) + "/")
             container_folder = test_folder / 'container'
             correct_read_file = test_folder / Path('correct_output.yaml')

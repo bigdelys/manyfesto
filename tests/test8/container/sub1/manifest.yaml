@@ -1,0 +1,13 @@
+(match *.txt):
+  is_txt1: False
+  is_txt2: True
+
+common_b:
+  subfield_1: 10
+
+common_c:
+  subfield_1:
+      subfield_1_2:
+        subfield_1_2_1: 20
+
+

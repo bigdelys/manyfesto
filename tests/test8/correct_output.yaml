@@ -1,0 +1,29 @@
+/sub1/file1.txt:
+  common_b:
+    subfield_1: 10
+    subfield_2: 2
+  common_c:
+    subfield_1:
+      subfield_1_1: 1
+      subfield_1_2: &id001
+        subfield_1_2_1: 20
+  is_txt1: false
+  is_txt2: true
+/sub1/file2.png:
+  common_b:
+    subfield_1: 10
+    subfield_2: 2
+  common_c:
+    subfield_1:
+      subfield_1_1: 1
+      subfield_1_2: *id001
+  is_png: true
+/sub2/file3.jpg:
+  common_b:
+    subfield_1: 1
+    subfield_2: 2
+  common_c:
+    subfield_1:
+      subfield_1_1: 1
+      subfield_1_2:
+        subfield_1_2_1: 2

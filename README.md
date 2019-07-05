@@ -126,3 +126,14 @@ file_kvs = {
 ```
 
 Please refer to the documentation to learn how to create `manifest.yaml` files.
+
+## Using Manyfesto for domain-specific standardized data packaging (containerization) 
+
+Assigning meta-data to individual files located on a conventional filesystem is a basic operation required for most (if not all) containerization (domain-specific standardized data packaging) systems, such as ESS, BIDS and ISA-TAB. This operation can be reformulated as assigning a number of (key: value) pairs to each file. Containerization systems differ in 
+* Their controlled vocabulary 
+* The way they encode (key: value) pairs (ESS uses XML, BIDS uses JSON and ISA-TAB uses tab-separated files) 
+* How they require files to be organized in subfolders. 
+
+The prescribed organization of the files is often selected to maximally map to the main concepts in the field, e.g. session in EEG studies (ESS) and Runs in fMRI (BIDS). Another way to look at this organization is to treat it as an optimal factorization, e.g. to use folder structure in a way that files sharing the most meta-data keys are placed under the same folder.
+
+Inspired by this principle and other commonalities across study containerization standards, Manyfesto "meta containerization" system provides a generalized interface for assigning (key: value) pairs to files. The main emphasis of Manyfesto is user convenience and lowering of the barriers to entry. Similar to BIDS, Manyfesto uses the file system and simple text files as its  primary user-interface.
