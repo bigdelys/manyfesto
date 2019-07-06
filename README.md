@@ -12,16 +12,16 @@ Most data-science workflows include a step where the data from several different
 For example, imagine you want to create a machine learning system to detect fraudulent transactions. The customer, e.g., a bank, provides you with 
 20 files, 15 of them containing legitimate transactions and 5 containing fraudulent ones. Transaction type is encoded in file names, along with some other information (date range). 
 
-So far these files are easy to manage: you can place them in two folders (fraudulent or not), or write a few lines of code to infer transaction classes from their names at load time. As you analyze these files, you find some quality issues with a subset of them and report this to the bank. After a while, they send you a new set of files with improved pre-processing. 
-This new set contains improved versions of the problematic subset plus some new files. But unfortunately, it has a slightly different naming convention, different enough that requires new code to process it.
+So far these files are easy to manage: you can place them in two folders (`fraudulent` and `legitimate`), or write a few lines of code to infer transaction classes from their names at load time. As you analyze these files, you find some quality issues with a subset of them and report this to the bank. After a while, they send you a new set of files with improved pre-processing. 
+This new set contains improved versions of the problematic subset plus some new files. But unfortunately, it has a slightly different naming convention and requires new code to process it.
 
 
 As the project continues, this process repeats a few more times, resulting in multiple folders, each containing files with a slightly different naming convention. 
 Now you need to keep track of several values for each file: the order it was received from the bank, its naming convention and whether it contains fraudulent transactions.
-This problem is often addressed by having multiple `if/else` statements in the import code. Unfortunately, this solution is neither elegant nor very scalable.   
+This problem is often addressed by having multiple `if/else` statements and execution branches in the import code. Unfortunately, this solution is neither elegant nor very scalable.   
 
-Manyfesto offers an alternative solution: all metadata is obtained in a single line of code by calling Manyfesto. To specify how metadata is to be extracted, you create a small YAML file is each folder. Common metadata or extraction rules can be placed on the parent folder and are inherited by subfolders.
-The advantages of this are:
+Manyfesto offers an alternative solution: all metadata is obtained in a single line of code. To specify how metadata is to be extracted, you create a small YAML file is each folder. Common metadata or extraction rules can be placed in the parent folder and are inherited by subfolders.
+The advantages of this approach are:
 1. It is declarative: metadata `(key:value)` sets and naming conventions are defined alongside the data files. 
 2. Inheritance of metadata and rules from parent folders in Manyfesto enables factorization, promoting a more intuitive organization of data files in nested directories.
 3. Facilitates data sharing: folders annotated with Manyfesto are self-describing. As long as the meanings of keys and values is understood across parties, there is no need to write a document to explain how files are named and organized in folders.  
@@ -135,11 +135,9 @@ From [this paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4782059/):
 Containerization means domain-specific standardized data packaging. It refers to organizing data files and metadata for using a standardized file structure and metadata encapsulation schema. Practitioners can ship a data container as a single unit and operate on its data using a standardized interface without having to deal with peculiarities of its organization.
 
 
-Assigning meta-data to individual files located on a conventional filesystem is a basic operation required for all containerization (i.e. domain-specific standardized data packaging) systems, such as ESS, BIDS, and ISA-TAB. This operation can be reformulated as assigning a number of (key: value) pairs to each file. Containerization systems differ in 
-* Their controlled vocabulary, also know as "ontology". This defines how keys and their values should be understood, i.e. mapped into the concepts specific to each domain (e.g. fraudulent/valid transactions, patient/healthy participants).
+Assigning meta-data to individual files located on a conventional filesystem is a basic operation required for all containerization systems, such as ESS, BIDS, and ISA-TAB. This operation can be reformulated as assigning a number of `(key: value)` pairs to each file. Containerization systems differ in 
+* Their controlled vocabulary, also know as "ontology". This defines how keys and their values should be understood, i.e. mapped into the concepts specific to each domain.
 * The way they encode `(key: value)` pairs: Manyfesto uses YAML, ["EEG Study Schema" (ESS)](http://www.eegstudy.org/) uses XML, ["Brain Imaging Data Structure" (BIDS)](https://bids.neuroimaging.io/) uses JSON and [ISA-TAB](https://isa-tools.org/) uses tab-separated files. 
-* How they require files to be organized in subfolders. 
+* How they require files to be organized in subfolders. The prescribed organization of the files should be selected to maximally map to the main concepts in the field, e.g. session in EEG studies (ESS) and Runs in fMRI (BIDS). Another way to look at this organization is to treat it as an optimal factorization, e.g. to use folder structure in a way that files sharing the most meta-data keys are placed under the same folder.
 
-The prescribed organization of the files should be selected to maximally map to the main concepts in the field, e.g. session in EEG studies (ESS) and Runs in fMRI (BIDS). Another way to look at this organization is to treat it as an optimal factorization, e.g. to use folder structure in a way that files sharing the most meta-data keys are placed under the same folder.
-
-Manyfesto was inspired by the "optimal factorization" principle and other commonalities across study containerization standards. By offering a general interface for assigning `(key: value)` pairs to files, Manyfesto can be used as the basis for new data containerization standards by adding domain-specific controlled vocabularies.
+Manyfesto was inspired by the "optimal factorization" principle and the commonalities across data containerization standards in the field of neuroscience. As it offers a general interface for assigning metadata to files, Manyfesto can be used as the basis for new data containerization standards in science and engineering fields by utilizing domain-specific controlled vocabularies.
