@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-num_tests = 10
+num_tests = 11
 
 class TestManyfesto(TestCase):
     def test_manyfesto(self):

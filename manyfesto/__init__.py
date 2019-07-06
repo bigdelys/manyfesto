@@ -17,7 +17,7 @@ MANIFEST_FILENAME_DIRECTIVE = 'manifest filename'
 # future directives
 TABLE_DIRECTIVE = 'table'
 NO_SUBDIR_DIRECTIVE = 'no-subdir'
-VERSION_DIRECTIVE = 'read version'
+VERSION_DIRECTIVE = 'manyfesto version'
 # the (namespace) directive is processes like a normal (key: value), hence not included.
 
 Context = namedtuple('Context', ['parent_key_values', 'directives', 'root_folder', 'errors', 'warnings',

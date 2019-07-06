@@ -5,10 +5,10 @@
 
 # Manyfesto
 
-Manyfesto is a data-science tool written in Python. It enables you to to assign meta-data (data about data, as a set of key-value pairs) to each file using a few simple rules. Such meta-data can then be used in data processing scripts, for example to assign class labels when training a machine learning algorithm.
+Manyfesto is a data-science tool written in Python. It enables you to to better organize data files on disk by assigning meta-data (data about data, as a set of key-value pairs) to each file using a few lines of YAML. Such meta-data can then be used in data processing scripts, for example to assign class labels when training a machine learning algorithm.
 
 ## What problem does it solve?
-You may be wondering what the problem Manyfesto tries to solve is. Most data-science workflows include a step where the data from several different files are read and combined to form data arrays. As the number of these files increases, it becomes more important to keep them organized and keep track of their metadata. 
+Most data-science workflows include a step where the data from several different files are read and combined to form data arrays. As the number of these files increases, it becomes more important to keep them organized and keep track of their metadata. 
 For example, imagine you want to create a machine learning system to detect fraudulent transactions. The customer, e.g., a bank, provides you with 
 20 files, 15 of them containing legitimate transactions and 5 containing fraudulent ones. Transaction type is encoded in file names, along with some other information (date range). 
 
@@ -103,7 +103,7 @@ To learn more about Manyfesto please read the documentation.
 >> pip install read
 ```
  
-## How to use Manyfeso
+## How to use Manyfesto
 To import a folder containing manifest.yaml files: 
 ```python
 import manyfesto
