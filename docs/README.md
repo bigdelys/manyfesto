@@ -16,7 +16,7 @@ if there are already data files named `manifest.yaml` under the folder. You can 
 ```
 
 Similar to other keys, the value for this directive may be overwritten in subfolders. Since Manyfesto traverses the 
-folder structure moving from folders to subfolders, custom manifest file names should be defined in a parent folder (otherwise the parser will try to use the default manifest filename).
+folder structure moving from folders to subfolders, custom manifest file names should be defined in parent folders (otherwise the parser will try to use the default manifest filename).
 
 ## Dictionary merge policy
 
