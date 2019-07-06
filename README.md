@@ -96,11 +96,11 @@ At any level of the folder hierarchy, a special `manifest.yaml` file containing 
 
 This is similar to how Cascading Style Sheets (CSS) work. Additionally, a handful of special directives (also written as `keys:value` pairs) define rules for extracting information from file paths  (`extract` directive) or assigning `(key:value)` pairs to only a subset of files (`match` directive).
 
-To learn more about Manyfesto please read the documentation.
+To learn more about Manyfesto please read [the documentation](/docs/README.md).
 
 ## Installation
 ```
->> pip install read
+>> pip install manyfesto
 ```
  
 ## How to use Manyfesto
@@ -125,15 +125,21 @@ file_kvs = {
                                 'is_png': True}}
 ```
 
-Please refer to the documentation to learn how to create `manifest.yaml` files.
+Please refer to [the documentation](/docs/README.md) to learn how to create `manifest.yaml` files.
 
-## Using Manyfesto for domain-specific standardized data packaging (containerization) 
+## Manyfesto as a data containerization tool
 
-Assigning meta-data to individual files located on a conventional filesystem is a basic operation required for most (if not all) containerization (domain-specific standardized data packaging) systems, such as ESS, BIDS and ISA-TAB. This operation can be reformulated as assigning a number of (key: value) pairs to each file. Containerization systems differ in 
-* Their controlled vocabulary 
-* The way they encode (key: value) pairs (ESS uses XML, BIDS uses JSON and ISA-TAB uses tab-separated files) 
+From [this paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4782059/):
+> Many fields have successfully employed data containerization to provide simplified and portable interfaces to unstructured or loosely structured data ‘payloads’ in the same way that intermodal shipping containers have revolutionized global commerce by replacing “break bulk” and other modes of transportation that required lengthy, manual handling of cargo [(Levinson, 2008)](http://www.eh.net/page/47/?s=standard), ‘Virtual Machine’ containers have enabled and are now an important basis for cloud computing. Most recently, Linux, and in particular Docker software application containers, have gained significant attention in the software development world. These technologies wrap an application in a complete file system containing code, tools and all the dependencies, e.g., runtime libraries, needed to run the application [(Pahl, 2015)](https://ieeexplore.ieee.org/document/7158965). 
+
+Containerization means domain-specific standardized data packaging. It refers to organizing data files and metadata for using a standardized file structure and metadata encapsulation schema. Practitioners can ship a data container as a single unit and operate on its data using a standardized interface without having to deal with peculiarities of its organization.
+
+
+Assigning meta-data to individual files located on a conventional filesystem is a basic operation required for all containerization (i.e. domain-specific standardized data packaging) systems, such as ESS, BIDS, and ISA-TAB. This operation can be reformulated as assigning a number of (key: value) pairs to each file. Containerization systems differ in 
+* Their controlled vocabulary, also know as "ontology". This defines how keys and their values should be understood, i.e. mapped into the concepts specific to each domain (e.g. fraudulent/valid transactions, patient/healthy participants).
+* The way they encode `(key: value)` pairs: Manyfesto uses YAML, ["EEG Study Schema" (ESS)](http://www.eegstudy.org/) uses XML, ["Brain Imaging Data Structure" (BIDS)](https://bids.neuroimaging.io/) uses JSON and [ISA-TAB](https://isa-tools.org/) uses tab-separated files. 
 * How they require files to be organized in subfolders. 
 
-The prescribed organization of the files is often selected to maximally map to the main concepts in the field, e.g. session in EEG studies (ESS) and Runs in fMRI (BIDS). Another way to look at this organization is to treat it as an optimal factorization, e.g. to use folder structure in a way that files sharing the most meta-data keys are placed under the same folder.
+The prescribed organization of the files should be selected to maximally map to the main concepts in the field, e.g. session in EEG studies (ESS) and Runs in fMRI (BIDS). Another way to look at this organization is to treat it as an optimal factorization, e.g. to use folder structure in a way that files sharing the most meta-data keys are placed under the same folder.
 
-Inspired by this principle and other commonalities across study containerization standards, Manyfesto "meta containerization" system provides a generalized interface for assigning (key: value) pairs to files. The main emphasis of Manyfesto is user convenience and lowering of the barriers to entry. Similar to BIDS, Manyfesto uses the file system and simple text files as its  primary user-interface.
+Manyfesto was inspired by the "optimal factorization" principle and other commonalities across study containerization standards. By offering a general interface for assigning `(key: value)` pairs to files, Manyfesto can be used as the basis for new data containerization standards by adding domain-specific controlled vocabularies.

@@ -256,7 +256,7 @@ and have in folder `/f1/f2`
    a: 10
 ```
 	
-then all *.set files will  have 
+then all `*.set` files will  have 
 ```yaml	
 a:10
 b:2
