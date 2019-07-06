@@ -7,6 +7,8 @@
     <list default="true" id="e170d025-d094-415a-83c1-1aa419a7fd78" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manyfesto/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/manyfesto/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manyfesto/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="226" column="8" selection-start-line="226" selection-start-column="4" selection-end-line="226" selection-end-column="8" />
+            <state relative-caret-position="175">
+              <caret line="14" column="48" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="48" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -45,24 +47,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="679">
-                <caret line="142" column="264" selection-start-line="142" selection-start-column="264" selection-end-line="142" selection-end-column="264" />
+              <first_editor relative-caret-position="250">
+                <caret line="10" selection-start-line="10" selection-end-line="10" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="1696">
-                <caret line="258" column="16" selection-start-line="258" selection-start-column="16" selection-end-line="258" selection-end-column="16" />
+              <first_editor relative-caret-position="300">
+                <caret line="18" selection-start-line="18" selection-end-line="18" />
               </first_editor>
               <second_editor />
             </state>
@@ -180,8 +182,8 @@
         <option value="$PROJECT_DIR$/tests/test10/container/sub1/manifest.yaml" />
         <option value="$PROJECT_DIR$/tests/test10/correct_output.yaml" />
         <option value="$PROJECT_DIR$/manyfesto/__init__.py" />
-        <option value="$PROJECT_DIR$/docs/README.md" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/docs/README.md" />
       </list>
     </option>
   </component>
@@ -376,7 +378,8 @@
       <workItem from="1561352961461" duration="40460000" />
       <workItem from="1562359746174" duration="54000" />
       <workItem from="1562359901587" duration="1449000" />
-      <workItem from="1562386863472" duration="9826000" />
+      <workItem from="1562386863472" duration="10475000" />
+      <workItem from="1562431445941" duration="966000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1557631172929</created>
@@ -539,7 +542,14 @@
       <option name="project" value="LOCAL" />
       <updated>1562395735492</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Worked on Readme.">
+      <created>1562396785936</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1562396785936</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -575,14 +585,14 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115295000" />
+    <option name="totallyTimeSpent" value="116910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="2462" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7379386" visible="true" weight="0.015899582" />
-      <window_info id="Structure" order="1" sideWeight="0.26206142" side_tool="true" visible="true" weight="0.015899582" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.73675764" visible="true" weight="0.015899582" />
+      <window_info id="Structure" order="1" sideWeight="0.26324236" side_tool="true" visible="true" weight="0.015899582" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32985553" />
@@ -600,10 +610,10 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" sideWeight="0.49451753" visible="true" weight="0.015899582" />
+      <window_info active="true" anchor="right" id="SciView" order="3" sideWeight="0.49357945" visible="true" weight="0.015899582" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="Coverage" order="5" sideWeight="0.50548244" side_tool="true" visible="true" weight="0.015899582" />
-      <window_info anchor="right" x="0" y="0" width="594" height="1216" id="Documentation" order="6" sideWeight="0.5052023" side_tool="true" weight="0.015899582" />
+      <window_info anchor="right" x="0" y="0" width="594" height="1216" id="Documentation" order="6" sideWeight="0.50642055" side_tool="true" visible="true" weight="0.015899582" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -897,15 +907,21 @@
     <entry file="file://$PROJECT_DIR$/tests/test10/container/sub1/file1.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test10/container/manifest.yaml">
+    <entry file="file://$PROJECT_DIR$/tests/test10/correct_output.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/manyfesto/test_manyfesto.py">
+    <entry file="file://$PROJECT_DIR$/manyfesto/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        <state relative-caret-position="175">
+          <caret line="14" column="48" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test10/container/manifest.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/test10/container/sub1/manifest.yaml">
       <provider selected="true" editor-type-id="text-editor">
@@ -914,34 +930,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test10/correct_output.yaml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1696">
-            <caret line="258" column="16" selection-start-line="258" selection-start-column="16" selection-end-line="258" selection-end-column="16" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manyfesto/__init__.py">
+    <entry file="file://$PROJECT_DIR$/manyfesto/test_manyfesto.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="226" column="8" selection-start-line="226" selection-start-column="4" selection-end-line="226" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="50">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="679">
-            <caret line="142" column="264" selection-start-line="142" selection-start-column="264" selection-end-line="142" selection-end-column="264" />
+          <first_editor relative-caret-position="250">
+            <caret line="10" selection-start-line="10" selection-end-line="10" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="300">
+            <caret line="18" selection-start-line="18" selection-end-line="18" />
           </first_editor>
           <second_editor />
         </state>

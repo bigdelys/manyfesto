@@ -13,11 +13,12 @@ MATCH_DIRECTIVE = 'match'
 IGNORE_DIRECTIVE = 'ignore'
 EXTRACT_DIRECTIVE = 'extract'
 MANIFEST_FILENAME_DIRECTIVE = 'manifest filename'
+VERSION_DIRECTIVE = 'manyfesto version'
 
 # future directives
 TABLE_DIRECTIVE = 'table'
 NO_SUBDIR_DIRECTIVE = 'no-subdir'
-VERSION_DIRECTIVE = 'manyfesto version'
+
 # the (namespace) directive is processes like a normal (key: value), hence not included.
 
 Context = namedtuple('Context', ['parent_key_values', 'directives', 'root_folder', 'errors', 'warnings',

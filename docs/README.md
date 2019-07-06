@@ -6,6 +6,18 @@ The main idea behind the Manyfesto is simple: at each level of a file hierarchy,
   <img src="/manyfest_folders.svg" width="700">
 </div>
 
+## Changing the default YAML filename
+
+In some circumstances you may need to change the name of the default YAML file that Manyfesto uses to read metadata, for example 
+if there are already data files named `manifest.yaml` under the folder. You can achieve this by using the `(manifest filename)` directives:
+
+```yaml
+(manifest filename): "my_manifest.yaml"
+```
+
+Similar to other keys, the value for this directive may be overwritten in subfolders. Since Manyfesto traverses the 
+folder structure moving from folders to subfolders, custom manifest file names should be defined in a parent folder (otherwise the parser will try to use the default manifest filename).
+
 ## Dictionary merge policy
 
 When processing YAML dictionaries (similar to Python dictionaries or JavaScript objects), for example:
