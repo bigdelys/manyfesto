@@ -8,7 +8,7 @@
 Manyfesto is an open-source data-science tool written in Python providing "metadata as code". It enables you to to better organize data files on disk by assigning meta-data (data about data, as a set of key-value pairs) to each file using a few lines of YAML. Such meta-data can then be used in data processing scripts, for example to assign class labels when training a machine learning algorithm.
 
 
-<img src="/star.svg" width="2%" align="top"> In case you are wondering, the letter "y" in in Manyfesto is not a misspelling: Manyfesto is a mix between the words "Many" and "Manifesto".
+<img src="/star.svg" width="2%" align="top" style="padding-bottom: -10px;"> In case you are wondering, the letter "y" in in Manyfesto is not a misspelling: Manyfesto is a mix between the words "Many" and "Manifesto".
 
 ## What problem does it solve?
 Most data-science workflows include a step where the data from several different files are read and combined to form data arrays. As the number of these files increases, it becomes more important to keep them organized and keep track of their metadata. 
