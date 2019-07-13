@@ -1,0 +1,12 @@
+(extract /[animal]_[breed].*):
+  breed:
+    prsn: persian
+    bxr: boxer
+  animal:
+    ct: cat
+    dg: dog
+
+(match *.png):
+  is_png: True
+
+common_a: 1
