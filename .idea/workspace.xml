@@ -4,9 +4,10 @@
     <bookmark url="file://$PROJECT_DIR$/no_track/scripts/test_extract_patterns_script.py" line="0" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e170d025-d094-415a-83c1-1aa419a7fd78" name="Default Changelist" comment="Readme changes.">
+    <list default="true" id="e170d025-d094-415a-83c1-1aa419a7fd78" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star.svg" beforeDir="false" afterPath="$PROJECT_DIR$/star.svg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +51,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="250">
-                <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
+                <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
               </first_editor>
               <second_editor />
             </state>
@@ -347,7 +348,7 @@
       <workItem from="1562359901587" duration="1449000" />
       <workItem from="1562386863472" duration="10475000" />
       <workItem from="1562431445941" duration="2049000" />
-      <workItem from="1563047182450" duration="1750000" />
+      <workItem from="1563047182450" duration="1872000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1557631172929</created>
@@ -580,7 +581,21 @@
       <option name="project" value="LOCAL" />
       <updated>1563048738460</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Readme changes.">
+      <created>1563048941397</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1563048941397</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Readme changes.">
+      <created>1563048966130</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1563048966130</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -616,7 +631,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119743000" />
+    <option name="totallyTimeSpent" value="119865000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="2462" height="1407" extended-state="0" />
@@ -984,7 +999,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="250">
-            <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
+            <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
           </first_editor>
           <second_editor />
         </state>
