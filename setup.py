@@ -10,19 +10,19 @@ Folders annotated with Manyfesto are self-describing: instead of writing a docum
 You can think of Manyfesto as 'Markdown for metadata assigment': compared to using JSON or XML to assign metadata for each file, it is simpler, easier to modify and more declarative as it uses rules instead of simply storing a separate sets of metadata for each file.
 
 
-Please see the project homepage for more information.
+Please visit project homepage at http://github.com/bigdelys/manyfesto for more information.
 """
 
-setup(name='read',
-      version='0.1.7',
-      description='Manyfesto is a data science tools for assigning key-value pairs to individual files using a series of simple rules.',
+setup(name='manyfesto',
+      version='1.0.0',
+      description='Manyfesto is a data-science tools for assigning key-value pairs to individual files using a series of simple rules.',
       long_description=long_description,
       long_description_content_type="text/markdown",
       url='http://github.com/bigdelys/manyfesto',
-      author='Nima Bigdely-Shamlo',
-      author_email='read@gmail.com',
+      author='Nima Bigdely-Shamlo, PhD',
+      author_email='nima.manyfesto@gmail.com',
       license='MIT',
-      packages=['read'],
+      packages=['manyfesto'],
       classifiers=[
             "Programming Language :: Python :: 3",
             "License :: OSI Approved :: MIT License",
