@@ -16,4 +16,4 @@ install:
 
 # command to run tests
 script:
-  - python  manyfesto\test_manyfesto.py
+  - python  manyfesto/test_manyfesto.py
