@@ -7,6 +7,12 @@ from pathlib import PurePath
 import re
 import uuid
 
+# use alternative scandir on old Python versions
+try:
+    from os import scandir, walk
+except ImportError:
+    from scandir import scandir, walk
+
 # current version
 DEFAULT_MANIFEST_FILE = 'manifest.yaml'
 MATCH_DIRECTIVE = 'match'
@@ -176,7 +182,8 @@ def _get_file_key_value_directives(folder: str, context: Context = None) -> \
     # normalize all paths to POSIX type.
     files = list()
     subfolders = list()
-    with os.scandir(folder) as it:
+
+    with scandir(folder) as it:
         for entry in it:
             if not entry.name.startswith('.'):
                 if entry.is_file():
