@@ -1,0 +1,18 @@
+/ct_prsn.jpg:
+  common_a: 1
+  animal: cat
+  breed: persian
+/ct_siamese.png:
+  common_a: 1
+  animal: cat
+  breed: siamese
+  is_png: true
+/dg_.png:
+  common_a: 1
+  animal: dog
+  breed: ''
+  is_png: true
+/dg_bxr.jpg:
+  common_a: 1
+  animal: dog
+  breed: boxer
