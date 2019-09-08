@@ -183,13 +183,12 @@ def _get_file_key_value_directives(folder: str, context: Context = None) -> \
     files = list()
     subfolders = list()
 
-    with scandir(folder) as it:
-        for entry in it:
-            if not entry.name.startswith('.'):
-                if entry.is_file():
-                    files.append(entry.path)
-                elif entry.is_dir():
-                    subfolders.append(entry.path)
+    for entry in scandir(folder):
+        if not entry.name.startswith('.'):
+            if entry.is_file():
+                files.append(entry.path)
+            elif entry.is_dir():
+                subfolders.append(entry.path)
 
     # assign inherited key-values to the files in the folder
     for file in files:
