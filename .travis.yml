@@ -17,5 +17,6 @@ install:
 script:
   - python  manyfesto/test_manyfesto.py
   - python -m coverage run manyfesto/test_manyfesto.py
-  - COVERALLS_REPO_TOKEN=MtSS6YjmlOAU13T847YDRVuMotNOAGMQJ
+after_success:
+  #- COVERALLS_REPO_TOKEN=MtSS6YjmlOAU13T847YDRVuMotNOAGMQJ
   - coveralls
