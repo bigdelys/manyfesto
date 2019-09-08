@@ -11,7 +11,11 @@ python:
 install:
   - pip install -r requirements.txt
   - pip install coverage
+  - pip install coveralls
 
 # command to run tests
 script:
   - python  manyfesto/test_manyfesto.py
+  - python -m coverage run manyfesto/test_manyfesto.py
+  - COVERALLS_REPO_TOKEN=MtSS6YjmlOAU13T847YDRVuMotNOAGMQJ
+  - coveralls
