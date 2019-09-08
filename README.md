@@ -1,7 +1,11 @@
 
+
 <div align="center">
   <img src="/logo.svg" width="90%">
 </div>
+
+-----------
+[![Build Status](https://travis-ci.com/bigdelys/manyfesto.svg?branch=master)](https://travis-ci.com/bigdelys/manyfesto)
 
 # Manyfesto
 
