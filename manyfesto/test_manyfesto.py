@@ -5,17 +5,22 @@ num_tests = 11
 
 class TestManyfesto(unittest.TestCase):
     def test_manyfesto(self):
-        from manyfesto import read
-        import oyaml
-        from pathlib import Path
 
+        # deal with path issues
         import os
-        manyfesto_path = Path(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        from pathlib import Path
+        manyfesto_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        import sys
+        if manyfesto_path not in sys.path:  # add parent dir to paths
+            print('Adding ', manyfesto_path, "to system path.")
+            sys.path.append(manyfesto_path)
 
+        import oyaml
+        from manyfesto import read
 
         print('\n-------------- Tests Output -----------------')
         for test_num in range(num_tests):
-            test_folder = manyfesto_path / Path(r"tests/test" + str(test_num) + "/")
+            test_folder = Path(manyfesto_path) / Path(r"tests/test" + str(test_num) + "/")
             container_folder = test_folder / 'container'
             correct_read_file = test_folder / Path('correct_output.yaml')
             output = read(container_folder)

@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e170d025-d094-415a-83c1-1aa419a7fd78" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manyfesto/test_manyfesto.py" beforeDir="false" afterPath="$PROJECT_DIR$/manyfesto/test_manyfesto.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +19,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manyfesto/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4237">
+              <caret line="255" column="26" selection-start-line="255" selection-start-column="26" selection-end-line="255" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/test10/container/manifest.yaml">
           <provider selected="true" editor-type-id="text-editor" />
@@ -35,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+            <state relative-caret-position="250">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -56,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manyfesto/test_manyfesto.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
-              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+              <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -170,15 +180,14 @@
         <option value="$PROJECT_DIR$/docs/README.md" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/manyfesto/test_manyfesto.py" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/manyfesto/test_manyfesto.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1296" />
+    <option name="width" value="1905" />
     <option name="height" value="1416" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -345,7 +354,7 @@
       <workItem from="1565413411070" duration="26000" />
       <workItem from="1565413611387" duration="273000" />
       <workItem from="1565461366867" duration="8000" />
-      <workItem from="1567886029630" duration="5015000" />
+      <workItem from="1567886029630" duration="8014000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1557631172929</created>
@@ -599,13 +608,24 @@
       <option name="project" value="LOCAL" />
       <updated>1563049063850</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Added .travis.yml for CI.">
+      <created>1567900233068</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1567900233071</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Fixed travis build command.">
+      <created>1567900448621</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1567900448623</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_manyfesto_py - 2019.07.04 at 16h 47m 52s.xml">
-      <configuration name="Unittests in test_manyfesto.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_test_manyfesto_py - 2019.07.04 at 17h 12m 23s.xml">
       <configuration name="Unittests in test_manyfesto.py" configurationId="tests" />
     </history-entry>
@@ -633,16 +653,19 @@
     <history-entry file="Unittests_in_test_manyfesto_py - 2019.09.07 at 13h 01m 32s.xml">
       <configuration name="Unittests in test_manyfesto.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_test_manyfesto_py - 2019.09.07 at 17h 46m 34s.xml">
+      <configuration name="Unittests in test_manyfesto.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125289000" />
+    <option name="totallyTimeSpent" value="128288000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1416" extended-state="0" />
+    <frame x="-8" y="0" width="1905" height="1416" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7318236" visible="true" weight="0.20506535" />
-      <window_info id="Structure" order="1" sideWeight="0.2681764" side_tool="true" visible="true" weight="0.20506535" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7318236" visible="true" weight="0.13693398" />
+      <window_info id="Structure" order="1" sideWeight="0.2681764" side_tool="true" visible="true" weight="0.13693398" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32985553" />
@@ -660,9 +683,9 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" sideWeight="0.488677" visible="true" weight="0.08660131" />
+      <window_info anchor="right" id="SciView" order="3" sideWeight="0.488677" visible="true" weight="0.057828695" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Coverage" order="5" sideWeight="0.511323" side_tool="true" visible="true" weight="0.08660131" />
+      <window_info anchor="right" id="Coverage" order="5" sideWeight="0.511323" side_tool="true" visible="true" weight="0.057828695" />
       <window_info anchor="right" x="0" y="0" width="594" height="1216" id="Documentation" order="6" sideWeight="0.51033735" side_tool="true" weight="0.031045752" />
     </layout>
   </component>
@@ -688,10 +711,12 @@
     <MESSAGE value="Worked on Readme." />
     <MESSAGE value="Worked on Documentation." />
     <MESSAGE value="Readme changes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Readme changes." />
+    <MESSAGE value="Added .travis.yml for CI." />
+    <MESSAGE value="Fixed travis build command." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed travis build command." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/manyfesto$Unittests_in_test_manyfesto_py.coverage" NAME="Unittests in test_manyfesto.py Coverage Results" MODIFIED="1567886484163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/manyfesto" />
+    <SUITE FILE_PATH="coverage/manyfesto$Unittests_in_test_manyfesto_py.coverage" NAME="Unittests in test_manyfesto.py Coverage Results" MODIFIED="1567903588636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/manyfesto" />
     <SUITE FILE_PATH="coverage/manyfesto$test_extract_patterns_script.coverage" NAME="test_extract_patterns_script Coverage Results" MODIFIED="1558316562138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/no_track/scripts" />
   </component>
   <component name="debuggerHistoryManager">
@@ -962,16 +987,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manyfesto/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/test10/container/manifest.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -999,17 +1014,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manyfesto/test_manyfesto.py">
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+        <state relative-caret-position="250">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
+    <entry file="file://$PROJECT_DIR$/manyfesto/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+        <state relative-caret-position="4237">
+          <caret line="255" column="26" selection-start-line="255" selection-start-column="26" selection-end-line="255" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manyfesto/test_manyfesto.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
         </state>
       </provider>
     </entry>
