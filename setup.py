@@ -29,5 +29,6 @@ setup(name='manyfesto',
             "Operating System :: OS Independent",
                   ],
       keywords='data-science data science metadata yaml manifest',
+      python_requires='>=3.6',
       install_requires=['oyaml>=0.9']
       )

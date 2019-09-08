@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e170d025-d094-415a-83c1-1aa419a7fd78" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manyfesto/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/manyfesto/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +26,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manyfesto/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="185" column="16" selection-start-line="185" selection-start-column="9" selection-end-line="185" selection-end-column="16" />
+            <state relative-caret-position="300">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -33,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+            <state relative-caret-position="290">
+              <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -42,6 +47,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/test10/container/manifest.yaml">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="241">
+                <caret line="105" column="40" selection-start-line="105" selection-start-column="40" selection-end-line="105" selection-end-column="40" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -56,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="75">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -66,8 +83,8 @@
         <entry file="file://$PROJECT_DIR$/docs/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="400">
-                <caret line="16" selection-start-line="16" selection-end-line="16" />
+              <first_editor relative-caret-position="241">
+                <caret line="132" column="100" selection-start-line="132" selection-start-column="100" selection-end-line="132" selection-end-column="100" />
               </first_editor>
               <second_editor />
             </state>
@@ -86,8 +103,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+            <state relative-caret-position="50">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -103,7 +120,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>yaml</find>
       <find>manyfestyaml</find>
       <find>canonical</find>
       <find>root_folder</find>
@@ -132,6 +148,8 @@
       <find>name</find>
       <find>walk</find>
       <find>scandir</find>
+      <find>install</find>
+      <find>pip</find>
     </findStrings>
     <replaceStrings>
       <replace>common_key</replace>
@@ -195,12 +213,12 @@
         <option value="$PROJECT_DIR$/tests/test10/container/sub1/manifest.yaml" />
         <option value="$PROJECT_DIR$/tests/test10/correct_output.yaml" />
         <option value="$PROJECT_DIR$/docs/README.md" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/manyfesto/test_manyfesto.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/manyfesto/__init__.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -373,7 +391,7 @@
       <workItem from="1565413411070" duration="26000" />
       <workItem from="1565413611387" duration="273000" />
       <workItem from="1565461366867" duration="8000" />
-      <workItem from="1567886029630" duration="9391000" />
+      <workItem from="1567886029630" duration="11282000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1557631172929</created>
@@ -683,13 +701,24 @@
       <option name="project" value="LOCAL" />
       <updated>1567907294579</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Added scandir alternative for old Python versions.">
+      <created>1567907611880</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1567907611880</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Testing scandir alternative for old Python versions.">
+      <created>1567908550562</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1567908550563</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_manyfesto_py - 2019.07.05 at 13h 57m 21s.xml">
-      <configuration name="Unittests in test_manyfesto.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_test_manyfesto_py - 2019.07.05 at 14h 04m 10s.xml">
       <configuration name="Unittests in test_manyfesto.py" configurationId="tests" />
     </history-entry>
@@ -717,20 +746,23 @@
     <history-entry file="Unittests_in_test_manyfesto_py - 2019.09.07 at 18h 47m 48s.xml">
       <configuration name="Unittests in test_manyfesto.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_test_manyfesto_py - 2019.09.07 at 18h 53m 23s.xml">
+      <configuration name="Unittests in test_manyfesto.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129665000" />
+    <option name="totallyTimeSpent" value="131556000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1905" height="1416" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7311522" visible="true" weight="0.13693398" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7311522" visible="true" weight="0.13693398" />
       <window_info id="Structure" order="1" sideWeight="0.2688478" side_tool="true" visible="true" weight="0.13693398" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32985553" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.43984064" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43984064" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.33944222" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -754,7 +786,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial commit." />
     <MESSAGE value="(manifest filename) directive added and tested." />
     <MESSAGE value="Started README." />
     <MESSAGE value="Reworked Readme." />
@@ -779,10 +810,11 @@
     <MESSAGE value="Added 'typing' module to requirements.txt" />
     <MESSAGE value="Improved compatibility with pythons version less han 3.5." />
     <MESSAGE value="Added scandir alternative for old Python versions." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added scandir alternative for old Python versions." />
+    <MESSAGE value="Testing scandir alternative for old Python versions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing scandir alternative for old Python versions." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/manyfesto$Unittests_in_test_manyfesto_py.coverage" NAME="Unittests in test_manyfesto.py Coverage Results" MODIFIED="1567907598842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/manyfesto" />
+    <SUITE FILE_PATH="coverage/manyfesto$Unittests_in_test_manyfesto_py.coverage" NAME="Unittests in test_manyfesto.py Coverage Results" MODIFIED="1567911073594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/manyfesto" />
     <SUITE FILE_PATH="coverage/manyfesto$test_extract_patterns_script.coverage" NAME="test_extract_patterns_script Coverage Results" MODIFIED="1558316562138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/no_track/scripts" />
   </component>
   <component name="debuggerHistoryManager">
@@ -1043,35 +1075,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="513">
-            <caret line="99" column="37" selection-start-line="99" selection-start-column="37" selection-end-line="99" selection-end-column="37" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/test10/container/manifest.yaml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="400">
-            <caret line="16" selection-start-line="16" selection-end-line="16" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manyfesto/test_manyfesto.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1082,22 +1087,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="241">
+            <caret line="132" column="100" selection-start-line="132" selection-start-column="100" selection-end-line="132" selection-end-column="100" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="241">
+            <caret line="105" column="40" selection-start-line="105" selection-start-column="40" selection-end-line="105" selection-end-column="40" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+        <state relative-caret-position="290">
+          <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manyfesto/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="185" column="16" selection-start-line="185" selection-start-column="9" selection-end-line="185" selection-end-column="16" />
+        <state relative-caret-position="300">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

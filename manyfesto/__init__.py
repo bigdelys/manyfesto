@@ -7,11 +7,9 @@ from pathlib import PurePath
 import re
 import uuid
 
-# use alternative scandir on old Python versions
-# try:
-#     from os import scandir, walk
-# except ImportError:
-from scandir import scandir, walk
+import sys
+if sys.version_info < (3, 6):
+    raise RuntimeError("This package requres Python 3.6+")
 
 # current version
 DEFAULT_MANIFEST_FILE = 'manifest.yaml'
@@ -183,12 +181,13 @@ def _get_file_key_value_directives(folder: str, context: Context = None) -> \
     files = list()
     subfolders = list()
 
-    for entry in scandir(folder):
-        if not entry.name.startswith('.'):
-            if entry.is_file():
-                files.append(entry.path)
-            elif entry.is_dir():
-                subfolders.append(entry.path)
+    with os.scandir(folder) as it:
+        for entry in it:
+            if not entry.name.startswith('.'):
+                if entry.is_file():
+                    files.append(entry.path)
+                elif entry.is_dir():
+                    subfolders.append(entry.path)
 
     # assign inherited key-values to the files in the folder
     for file in files:

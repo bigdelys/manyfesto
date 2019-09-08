@@ -102,6 +102,9 @@ This is similar to how Cascading Style Sheets (CSS) work. Additionally, a handfu
 To learn more about Manyfesto please read [the documentation](/docs/README.md).
 
 ## Installation
+
+Python version 3.6 or later is required.
+
 ```
 >> pip install manyfesto
 ```
