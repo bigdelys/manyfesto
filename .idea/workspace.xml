@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e170d025-d094-415a-83c1-1aa419a7fd78" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manyfesto/test_manyfesto.py" beforeDir="false" afterPath="$PROJECT_DIR$/manyfesto/test_manyfesto.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manyfesto/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4237">
-              <caret line="255" column="26" selection-start-line="255" selection-start-column="26" selection-end-line="255" selection-end-column="26" />
+            <state relative-caret-position="462">
+              <caret line="119" column="7" lean-forward="true" selection-start-line="119" selection-start-column="7" selection-end-line="119" selection-end-column="7" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -66,16 +66,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manyfesto/test_manyfesto.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="475">
+              <caret line="25" column="48" lean-forward="true" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="50">
@@ -189,8 +189,8 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/.travis.yml" />
-        <option value="$PROJECT_DIR$/manyfesto/test_manyfesto.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/manyfesto/test_manyfesto.py" />
       </list>
     </option>
   </component>
@@ -363,7 +363,7 @@
       <workItem from="1565413411070" duration="26000" />
       <workItem from="1565413611387" duration="273000" />
       <workItem from="1565461366867" duration="8000" />
-      <workItem from="1567886029630" duration="8402000" />
+      <workItem from="1567886029630" duration="8803000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit.">
       <created>1557631172929</created>
@@ -645,7 +645,21 @@
       <option name="project" value="LOCAL" />
       <updated>1567906366979</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Added 'typing' module to requirements.txt">
+      <created>1567906546530</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1567906546530</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Improved compatibility with pythons version less han 3.5.">
+      <created>1567906809849</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1567906809850</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -681,13 +695,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128676000" />
+    <option name="totallyTimeSpent" value="129077000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1905" height="1416" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7318236" visible="true" weight="0.13693398" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7318236" visible="true" weight="0.13693398" />
       <window_info id="Structure" order="1" sideWeight="0.2681764" side_tool="true" visible="true" weight="0.13693398" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -701,7 +715,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3314741" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3314741" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.24860558" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -738,7 +752,9 @@
     <MESSAGE value="Fixed travis build command." />
     <MESSAGE value="Added path discovery to the test script." />
     <MESSAGE value="Added one missing file to git." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added one missing file to git." />
+    <MESSAGE value="Added 'typing' module to requirements.txt" />
+    <MESSAGE value="Improved compatibility with pythons version less han 3.5." />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved compatibility with pythons version less han 3.5." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/manyfesto$Unittests_in_test_manyfesto_py.coverage" NAME="Unittests in test_manyfesto.py Coverage Results" MODIFIED="1567903588636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/manyfesto" />
@@ -1039,10 +1055,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/manyfesto/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4237">
-          <caret line="255" column="26" selection-start-line="255" selection-start-column="26" selection-end-line="255" selection-end-column="26" />
+        <state relative-caret-position="462">
+          <caret line="119" column="7" lean-forward="true" selection-start-line="119" selection-start-column="7" selection-end-line="119" selection-end-column="7" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -1051,15 +1074,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manyfesto/test_manyfesto.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        <state relative-caret-position="475">
+          <caret line="25" column="48" lean-forward="true" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
         </state>
       </provider>
     </entry>

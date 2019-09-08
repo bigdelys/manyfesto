@@ -23,7 +23,7 @@ class TestManyfesto(unittest.TestCase):
             test_folder = Path(manyfesto_path) / Path(r"tests/test" + str(test_num) + "/")
             container_folder = test_folder / 'container'
             correct_read_file = test_folder / Path('correct_output.yaml')
-            output = read(container_folder.as_posix())
+            output = read(str(container_folder))
             with correct_read_file.open('r') as f:
                 correct_read_odict = oyaml.safe_load(f)
             assert output == correct_read_odict, "Error in matching Test " + str(test_num) + " output: \n %s" % \
