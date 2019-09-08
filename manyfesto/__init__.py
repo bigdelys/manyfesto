@@ -8,10 +8,10 @@ import re
 import uuid
 
 # use alternative scandir on old Python versions
-try:
-    from os import scandir, walk
-except ImportError:
-    from scandir import scandir, walk
+# try:
+#     from os import scandir, walk
+# except ImportError:
+from scandir import scandir, walk
 
 # current version
 DEFAULT_MANIFEST_FILE = 'manifest.yaml'
