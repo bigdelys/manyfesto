@@ -14,7 +14,7 @@ Please visit project homepage at http://github.com/bigdelys/manyfesto for more i
 """
 
 setup(name='manyfesto',
-      version='1.0.0',
+      version='1.0.1',
       description='Manyfesto is a data-science tools for assigning key-value pairs to individual files using a series of simple rules.',
       long_description=long_description,
       long_description_content_type="text/markdown",

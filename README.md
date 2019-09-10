@@ -7,6 +7,7 @@
 -----------
 [![Build Status](https://travis-ci.com/bigdelys/manyfesto.svg?branch=master)](https://travis-ci.com/bigdelys/manyfesto)
 [![Coverage Status](https://coveralls.io/repos/github/bigdelys/manyfesto/badge.svg)](https://coveralls.io/github/bigdelys/manyfesto)
+[![PyPI version](https://badge.fury.io/py/manyfesto.svg)](https://badge.fury.io/py/manyfesto)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Manyfesto is an open-source data-science tool written in Python providing "metadata as code". It enables you to to better organize data files on disk by assigning meta-data (data about data, as a set of key-value pairs) to each file using a few lines of YAML. Such meta-data can then be used in data processing scripts, for example to assign class labels when training a machine learning algorithm.
