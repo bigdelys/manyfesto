@@ -7,6 +7,7 @@
 -----------
 [![Build Status](https://travis-ci.com/bigdelys/manyfesto.svg?branch=master)](https://travis-ci.com/bigdelys/manyfesto)
 [![Coverage Status](https://coveralls.io/repos/github/bigdelys/manyfesto/badge.svg)](https://coveralls.io/github/bigdelys/manyfesto)
+[![CodeFactor](https://www.codefactor.io/repository/github/bigdelys/manyfesto/badge)](https://www.codefactor.io/repository/github/bigdelys/manyfesto)
 [![PyPI version](https://badge.fury.io/py/manyfesto.svg)](https://badge.fury.io/py/manyfesto)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
